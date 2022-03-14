@@ -1,29 +1,39 @@
 {
 	"format_version": 2,
 	"header": {
-	  "name": "TEVMAINPACK",
-	  "description": "Main Pack for the The Endless Void Minecraft Server",
-	  "uuid": "8c0ce83e-940d-ce31-4e51-edfb670c348d",
-	  "version": [
-		1,
-		0,
-		0
-	  ],
-	  "min_engine_version": [
-		1,
-		17,
-		0
-	  ]
+		"name": "TEVMAINPACK",
+		"description": "Main Pack for the The Endless Void Minecraft Server",
+		"uuid": "8c0ce83e-940d-ce31-4e51-edfb670c348d",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			17,
+			0
+		]
 	},
 	"modules": [
-	  {
-		"type": "data",
-		"uuid": "02f3f279-ebba-9dc7-2648-d4a50b545b85",
-		"version": [
-		  1,
-		  0,
-		  0
-		]
-	  }
-	]
-  }
+		{
+			"type": "data",
+			"uuid": "02f3f279-ebba-9dc7-2648-d4a50b545b85",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"bridge": [
+				"2.2.5"
+			],
+			"dash": [
+				"0.8.3"
+			]
+		}
+	}
+}

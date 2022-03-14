@@ -94,6 +94,9 @@
 		},
 		"tev_chungisword": {
 			"textures": "textures/items/chungisword"
+		},
+		"tev_crystalblade": {
+			"textures": "textures/items/crystalsword"
 		}
 	}
 }

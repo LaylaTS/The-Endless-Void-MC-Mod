@@ -27,3 +27,4 @@ entity.tev:fdesertcreeper.name=Friendly Desert Creeper
 item.tev:essencesword=§4Death Mode Exclusive§r | §5Essence Sword§r | §g1000 Essence
 item.tev:essenceswordbooster.name=§9Accessory§r | §gDrowned's Amulet§r\n§8§oEquip in the shield slot.\nBoosts Essence Sword and Chungi Sword.\nAllows the use of Essence Sword in apocalypse mode.
 item.tev:chungisword=§5Chungi Sword§r\n§8§oSword from the black market.\nHeals you when you hit someone.\nHurts when you miss a hit.\nGets an additional ability from Drowned's Amulet.
+item.tev:crystalblade=§5Crystal Blade
