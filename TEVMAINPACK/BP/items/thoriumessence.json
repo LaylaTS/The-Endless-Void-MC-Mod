@@ -1,0 +1,18 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:thoriumessence",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tev_thoriumessence"
+			},
+			"minecraft:display_name": {
+				"value": "§gThorium Essence§r§o§8\nMagical essence obtainable from giant monsters\nIt can be crafted into an armor set"
+			},
+			"minecraft:foil": true
+		}
+	}
+}

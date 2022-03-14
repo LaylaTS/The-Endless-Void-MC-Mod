@@ -1,0 +1,37 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "tev:essenceswordbooster"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "tev_essenceswordbooster"
+            },
+            "minecraft:foil": true,
+            "minecraft:max_stack_size": 1,
+            "minecraft:display_name": {
+                "value": "§9Accessory§r | §gDrowned's Amulet§r\n§8§oEquip in the shield slot.\nBoosts Essence Sword and Chungi Sword.\nAllows the use of Essence Sword in apocalypse mode."
+            },
+            "minecraft:allow_off_hand": true,
+            "minecraft:render_offsets": {
+                "off_hand": {
+                    "first_person": {
+                        "scale": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "third_person": {
+                        "scale": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

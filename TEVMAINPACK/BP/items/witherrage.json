@@ -1,0 +1,70 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "witherweapons:witherrage",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sword"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 99999999999
+			},
+			"minecraft:display_name": {
+				"value": "§4Tank§r | §5Wither`s Rage§r | §970 Mana"
+			},
+			"minecraft:damage": 18,
+			"minecraft:icon": {
+				"texture": "witherweapons_witherrage"
+			},
+			"minecraft:enchantable": {
+				"value": 14,
+				"slot": "sword"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": "minecraft:web",
+						"speed": 12
+					},
+					{
+						"block": "minecraft:bamboo",
+						"speed": 8
+					}
+				]
+			},
+			"minecraft:weapon": {},
+			"tag:minecraft:is_sword": {},
+			"minecraft:foil": true,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "witherattack"
+				}
+			},
+			"minecraft:cooldown": {
+				"duration": {
+					"1": {}
+				},
+				"category": {
+					"action_cooldown": {}
+				}
+			}
+		},
+		"events": {
+			"witherattack": {
+				"run_command": {
+					"command": [
+						"function witherragefunction"
+					],
+					"target": "self"
+				}
+			}
+		}
+	}
+}

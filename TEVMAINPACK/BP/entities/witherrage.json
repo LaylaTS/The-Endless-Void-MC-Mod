@@ -1,0 +1,34 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "witherboss:witherrage",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:behavior.knockback_roar": {
+				"priority": 0,
+				"knockback_damage": 15,
+				"knockback_horizontal_strength": 7,
+				"knockback_vertical_strength": 3,
+				"damage_filters": {
+					"operator": "!=",
+					"test": "is_family",
+					"subject": "other",
+					"value": "player"
+				},
+				"attack_time": 0.1,
+				"knockback_filters": {
+					"operator": "!=",
+					"subject": "other",
+					"value": "player",
+					"test": "is_family"
+				}
+			}
+		},
+		"events": {}
+	}
+}

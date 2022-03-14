@@ -1,0 +1,67 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "witherweapons:withermenace",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "§4Assassin §r|§5 Wither`s Menace §r| §350 Mana§r\n§8§oDagger forged from souls captured by the Wither\nUses 50 mana to deal 35 damage to the closest enemy\nalso deals 6 damage to it`s user"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sword"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 6186761367812367
+			},
+			"minecraft:damage": 30,
+			"minecraft:icon": {
+				"texture": "witherweapons_withermenace"
+			},
+			"minecraft:enchantable": {
+				"value": 14,
+				"slot": "sword"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": "minecraft:web",
+						"speed": 12
+					},
+					{
+						"block": "minecraft:bamboo",
+						"speed": 8
+					}
+				]
+			},
+			"minecraft:weapon": {},
+			"tag:minecraft:is_sword": {},
+			"minecraft:foil": true,
+			"minecraft:on_use": {
+				"on_use": {
+					"target": "self",
+					"event": "gregoryevent"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "withermenace",
+				"duration": 1
+			}
+		},
+		"events": {
+			"gregoryevent": {
+				"run_command": {
+					"target": "self",
+					"command": [
+						"function menaceabilitywither"
+					]
+				}
+			}
+		}
+	}
+}

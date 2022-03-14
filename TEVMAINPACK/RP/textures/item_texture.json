@@ -1,0 +1,99 @@
+{
+	"texture_data": {
+		"tev_rage": {
+			"textures": "textures/items/guardianweapon_rage"
+		},
+		"tev_wise": {
+			"textures": "textures/items/guardianweapon_wise"
+		},
+		"tev_menace": {
+			"textures": "textures/items/guardianweapon_menace"
+		},
+		"tev_thorium_helmet": {
+			"textures": "textures/items/thorium_helmet"
+		},
+		"tev_thorium_chestplate": {
+			"textures": "textures/items/thorium_chestplate"
+		},
+		"tev_thorium_leggings": {
+			"textures": "textures/items/thorium_leggings"
+		},
+		"tev_thorium_boots": {
+			"textures": "textures/items/thorium_boots"
+		},
+		"tev_test_helmet": {
+			"textures": "textures/items/test_helmet"
+		},
+		"tev_test_chestplate": {
+			"textures": "textures/items/test_chestplate"
+		},
+		"tev_test_leggings": {
+			"textures": "textures/items/test_leggings"
+		},
+		"tev_test_boots": {
+			"textures": "textures/items/test_boots"
+		},
+		"tev_thoriumessence": {
+			"textures": "textures/items/thorium_essence"
+		},
+		"tev_thoriumsword": {
+			"textures": "textures/items/thorium_sword"
+		},
+		"tev_kwer": {
+			"textures": "textures/items/kwer"
+		},
+		"tev_classability": {
+			"textures": "textures/items/ability"
+		},
+		"tev_ultimateberrysword": {
+			"textures": "textures/items/berry_ultimatesword"
+		},
+		"tev_essencesword": {
+			"textures": "textures/items/moneysword"
+		},
+		"tev_sword": {
+			"textures": "textures/items/berry_sword"
+		},
+		"witherweapons_witherrage": {
+			"textures": "textures/items/witherrage"
+		},
+		"witherweapons_witherwise": {
+			"textures": "textures/items/witherwise2"
+		},
+		"witherweapons_withermenace": {
+			"textures": "textures/items/withermenace"
+		},
+		"witherweapons_blazingplate_helmet": {
+			"textures": [
+				"textures/items/blazingplate_helmet"
+			]
+		},
+		"witherweapons_blazingplate_chestplate": {
+			"textures": [
+				"textures/items/blazingplate_chestplate"
+			]
+		},
+		"witherweapons_blazingplate_leggings": {
+			"textures": [
+				"textures/items/blazingplate_leggings"
+			]
+		},
+		"witherweapons_blazingplate_boots": {
+			"textures": [
+				"textures/items/blazingplate_boots"
+			]
+		},
+		"witherweapons_travelboots": {
+			"textures": "textures/items/boots"
+		},
+		"witherweapons_travelbootse": {
+			"textures": "textures/items/boots"
+		},
+		"tev_essenceswordbooster": {
+			"textures": "textures/items/essenceswordbooster"
+		},
+		"tev_chungisword": {
+			"textures": "textures/items/chungisword"
+		}
+	}
+}

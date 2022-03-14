@@ -1,0 +1,1 @@
+kick @a[tag=ban] "Anti Cheat Ban - Get a life LMAO"

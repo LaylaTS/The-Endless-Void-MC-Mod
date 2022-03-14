@@ -1,0 +1,19 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.bigblaze": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.body"
+				},
+				{
+					"head": "material.head"
+				}
+			],
+			"textures": [
+				"texture.default"
+			]
+		}
+	}
+}

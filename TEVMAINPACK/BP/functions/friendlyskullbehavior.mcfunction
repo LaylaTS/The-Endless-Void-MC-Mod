@@ -1,0 +1,2 @@
+execute @e[type=witherboss:friendlyskull] ~ ~ ~ tp @s ^ ^ ^0.5 facing @e[c=1,type=!fireball,type=!wither_skull,type=!arrow,type=!witherboss:friendlyskull,type=!player,type=!item,type=!npc,type=!xp_orb,type=!armor_stand] true
+execute @e[type=witherboss:friendlyskull] ~ ~ ~ effect @a[r=4] wither 0 0 true
