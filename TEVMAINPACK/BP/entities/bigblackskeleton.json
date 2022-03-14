@@ -19,8 +19,8 @@
 				"breathes_water": true
 			},
 			"minecraft:health": {
-				"value": 1000,
-				"max": 1000
+				"value": 900,
+				"max": 900
 			},
 			"minecraft:equip_item": {},
 			"minecraft:collision_box": {
@@ -39,7 +39,7 @@
 				"table": "loot_tables/entities/wither_skeleton_gear.json"
 			},
 			"minecraft:movement": {
-				"value": 0.3
+				"value": 0.32
 			},
 			"minecraft:navigation.walk": {
 				"is_amphibious": true,

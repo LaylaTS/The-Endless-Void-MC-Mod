@@ -8,6 +8,12 @@
 			"is_experimental": false
 		},
 		"component_groups": {
+			"tev:mainhealth": {
+				"minecraft:health": {
+					"max": 20,
+					"value": 20
+				}
+			},
 			"tev:tankclass": {
 				"minecraft:rideable": {
 					"seat_count": 1,
@@ -332,6 +338,20 @@
 					"target": "self",
 					"command": [
 						"/ride @a[r=3] stop_riding"
+					]
+				}
+			},
+			"tev:healthreset": {
+				"add": {
+					"component_groups": [
+						"tev:mainhealth"
+					]
+				}
+			},
+			"tev:healthreset2": {
+				"remove": {
+					"component_groups": [
+						"tev:mainhealth"
 					]
 				}
 			}

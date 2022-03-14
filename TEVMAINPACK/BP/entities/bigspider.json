@@ -118,7 +118,7 @@
 					]
 				},
 				"minecraft:behavior.leap_at_target": {
-					"priority": 4,
+					"priority": 1,
 					"yd": 0.4,
 					"must_be_on_ground": false
 				},
@@ -202,7 +202,7 @@
 		},
 		"components": {
 			"minecraft:scale": {
-				"value": 5
+				"value": 2.5
 			},
 			"minecraft:is_hidden_when_invisible": {},
 			"minecraft:experience_reward": {
@@ -250,14 +250,13 @@
 				]
 			},
 			"minecraft:movement": {
-				"value": 0.3
+				"value": 0.5
 			},
 			"minecraft:navigation.climb": {
 				"can_path_over_water": true
 			},
 			"minecraft:movement.basic": {},
 			"minecraft:jump.static": {},
-			"minecraft:can_climb": {},
 			"minecraft:despawn": {
 				"despawn_from_distance": {}
 			},
@@ -307,6 +306,11 @@
 		},
 		"events": {
 			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"minecraft:spider_hostile"
+					]
+				},
 				"randomize": [
 					{
 						"weight": 1,
