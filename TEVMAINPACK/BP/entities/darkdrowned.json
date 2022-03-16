@@ -94,7 +94,6 @@
         },
         "components": {
             "minecraft:nameable": {},
-            // Zombie Components
             "minecraft:type_family": {
                 "family": [
                     "drowned",
