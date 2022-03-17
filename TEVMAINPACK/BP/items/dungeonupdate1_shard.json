@@ -1,0 +1,20 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "dungeonupdate1:shard",
+      "category": "items"
+    },
+    "components": {
+      "minecraft:hand_equipped": false,
+      "minecraft:max_stack_size": 64,
+      "minecraft:foil": true,
+      "minecraft:icon": {
+        "texture": "dungeonupdate1_shard.json"
+      },
+      "minecraft:display_name": {
+        "value": "§9Dungeon Shard"
+      }
+    }
+  }
+}

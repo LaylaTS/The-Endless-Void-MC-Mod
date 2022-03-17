@@ -18,7 +18,7 @@
 					"min": 0
 				}
 			},
-			"minecraft:damage": 42,
+			"minecraft:damage": 38,
 			"minecraft:icon": {
 				"texture": "tev_essencesword"
 			},

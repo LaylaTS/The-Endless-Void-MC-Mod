@@ -18,7 +18,7 @@
 					"min": 0
 				}
 			},
-			"minecraft:damage": 40,
+			"minecraft:damage": 35,
 			"minecraft:icon": {
 				"texture": "tev_chungisword"
 			},

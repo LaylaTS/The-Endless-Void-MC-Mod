@@ -24,7 +24,7 @@
 				}
 			},
 			"minecraft:mining_speed": 1,
-			"minecraft:damage": 39,
+			"minecraft:damage": 30,
 			"minecraft:enchantable": {
 				"value": 15,
 				"slot": "sword"
@@ -85,8 +85,8 @@
 				"value": "§gUltimate Berry Sword §f| §b200 Mana§r§o§8\nGo touch grass!"
 			},
 			"minecraft:cooldown": {
-				"category": "attack",
-				"duration": 30
+				"category": "ultberrysword",
+				"duration": 45
 			}
 		},
 		"events": {

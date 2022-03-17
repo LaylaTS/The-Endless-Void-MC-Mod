@@ -21,7 +21,7 @@
 			"minecraft:display_name": {
 				"value": "§5Crystal Blade"
 			},
-			"minecraft:damage": 5,
+			"minecraft:damage": 40,
 			"minecraft:icon": {
 				"texture": "tev_crystalblade"
 			},
@@ -43,8 +43,29 @@
 					}
 				]
 			},
-			"minecraft:weapon": {},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "tev:hitcount",
+					"target": "self"
+				}
+			},
 			"tag:minecraft:is_sword": {}
+		},
+		"events": {
+			"tev:mainability": {
+				"run_command": {
+					"command": [
+						"effect @s[scores={hitcounter=100..}] "
+					]
+				}
+			},
+			"tev:hitcount": {
+				"run_command": {
+					"command": [
+						"/scoreboard players add @s hitcounter 1"
+					]
+				}
+			}
 		}
 	}
 }

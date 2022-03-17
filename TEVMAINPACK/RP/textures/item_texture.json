@@ -97,6 +97,21 @@
 		},
 		"tev_crystalblade": {
 			"textures": "textures/items/crystalsword"
+		},
+		"tev_corruptedissue": {
+			"textures": "textures/items/corruptedtissue"
+		},
+		"kakui_menuopener": {
+			"textures": "textures/items/kakui_menuopener"
+		},
+		"dungeonupdate1_blackhole.json": {
+			"textures": "textures/items/dungeonupdate1_blackhole"
+		},
+		"dungeonupdate1_bonesword.json": {
+			"textures": "textures/items/dungeonupdate1_bonesword"
+		},
+		"dungeonupdate1_shard.json": {
+			"textures": "textures/items/dungeonupdate1_shard"
 		}
 	}
 }

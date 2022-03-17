@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:corruptedissue",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tev_corruptedissue"
+			},
+			"minecraft:max_stack_size": 32,
+			"minecraft:display_name": {
+				"value": "§cCorrupted Tissue"
+			},
+			"minecraft:foil": true
+		}
+	}
+}

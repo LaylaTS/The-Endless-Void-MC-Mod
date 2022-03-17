@@ -1,0 +1,20 @@
+{
+    "pools": [
+        {
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.0025
+                }
+            ],
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "tev:essenceswordbooster",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

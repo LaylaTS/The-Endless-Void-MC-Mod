@@ -17,7 +17,7 @@
 			"minecraft:display_name": {
 				"value": "§4Tank§r | §5Wither`s Rage§r | §970 Mana"
 			},
-			"minecraft:damage": 18,
+			"minecraft:damage": 15,
 			"minecraft:icon": {
 				"texture": "witherweapons_witherrage"
 			},

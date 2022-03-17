@@ -17,7 +17,7 @@
 			"minecraft:display_name": {
 				"value": "§4Mage §r|§5 Wither`s Wise §r| §340 Mana"
 			},
-			"minecraft:damage": 20,
+			"minecraft:damage": 18,
 			"minecraft:icon": {
 				"texture": "witherweapons_witherwise"
 			},

@@ -1,0 +1,119 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "category": "equipment",
+      "identifier": "dungeonupdate1:bonesword"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "dungeonupdate1_bonesword.json"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.sword"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:allow_off_hand": true,
+      "minecraft:foil": true,
+      "minecraft:durability": {
+        "max_durability": 1006499494497057407,
+        "damage_chance": {
+          "min": 0,
+          "max": 0
+        }
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": [
+              "minecraft:emerald"
+            ],
+            "repair_amount": 10
+          },
+          {
+            "items": [
+              "dungeonupdate1:bonesword"
+            ],
+            "repair_amount": "context.other->query.remaining_durability + 0.2 * context.other->query.max_durability"
+          }
+        ]
+      },
+      "minecraft:mining_speed": 1,
+      "minecraft:damage": 6,
+      "minecraft:enchantable": {
+        "value": 15,
+        "slot": "sword"
+      },
+      "minecraft:can_destroy_in_creative": true,
+      "minecraft:weapon": {
+        "on_hurt_entity": {
+          "event": "hurt"
+        },
+        "on_not_hurt_entity": {
+          "event": "hurt"
+        },
+        "on_hit_block": {
+          "event": "hurt"
+        }
+      },
+      "minecraft:on_use": {
+        "on_use": {
+          "event": "on_use_event"
+        }
+      },
+      "minecraft:render_offsets": {
+        "main_hand": {
+          "third_person": {
+            "scale": [
+              0.1,
+              0.1,
+              0.1
+            ]
+          },
+          "first_person": {
+            "scale": [
+              0.037999999999977205,
+              0.037999999999977205,
+              0.037999999999977205
+            ]
+          }
+        },
+        "off_hand": {
+          "third_person": {
+            "scale": [
+              0.1,
+              0.1,
+              0.1
+            ]
+          },
+          "first_person": {
+            "scale": [
+              0.037999999999977205,
+              0.037999999999977205,
+              0.037999999999977205
+            ]
+          }
+        }
+      },
+      "tag:minecraft:is_sword": {},
+      "minecraft:display_name": {
+        "value": "§dBone Sword§f | §915 Mana"
+      },
+      "minecraft:cooldown": {
+        "category": "action_cooldown",
+        "duration": 1
+      }
+    },
+    "events": {
+      "on_use_event": {
+        "run_command": {
+          "command": [
+            "function bonesword"
+          ],
+          "target": "self"
+        }
+      }
+    }
+  }
+}
