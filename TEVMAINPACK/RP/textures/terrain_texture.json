@@ -1,7 +1,11 @@
 {
-	"num_mip_levels": 4,
-	"padding": 8,
-	"resource_pack_name": "Wither Weapons",
+	"resource_pack_name": "TEV",
 	"texture_name": "atlas.terrain",
-	"texture_data": {}
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"tev_berryore": {
+			"textures": "textures/blocks/berry_ore_west"
+		}
+	}
 }

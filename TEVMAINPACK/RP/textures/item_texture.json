@@ -112,6 +112,15 @@
 		},
 		"dungeonupdate1_shard.json": {
 			"textures": "textures/items/dungeonupdate1_shard"
+		},
+		"berry_pickaxe.json": {
+			"textures": "textures/items/berry_pickaxe"
+		},
+		"berryshard": {
+			"textures": "textures/items/berryshard"
+		},
+		"magicalbladeenchantedwithwood": {
+			"textures": "textures/items/magicalbladeenchantedwithwood"
 		}
 	}
 }

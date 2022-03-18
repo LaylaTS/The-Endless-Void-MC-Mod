@@ -29,3 +29,7 @@ item.tev:essenceswordbooster.name=§9Accessory§r | §gDrowned's Amulet§r\n§8�
 item.tev:chungisword=§5Chungi Sword§r\n§8§oSword from the black market.\nHeals you when you hit someone.\nHurts when you miss a hit.\nGets an additional ability from Drowned's Amulet.
 item.tev:crystalblade=§5Crystal Blade
 item.tev:corruptedissue=§cCorrupted Tissue
+tile.tev:berryore.name=berryore
+item.tev:woodenblade=§5Wooden Blade§r | §b20 Mana§r\n§8§oLog was here.\nGives you speed when clicked.\n15s cooldown.
+item.tev:woodenblade=§5Wooden Blade§r | §b20 Mana§r\n§8§oLog was here.\nGives you speed when clicked.\n15s cooldown.
+item.tev:woodenblade=§5Wooden Blade§r | §b20 Mana§r\n§8§oLog was here.\nGives you speed when clicked.\n15s cooldown.
