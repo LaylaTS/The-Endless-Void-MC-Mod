@@ -6,6 +6,9 @@
 			"category": "equipment"
 		},
 		"components": {
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sword"
+			},
 			"minecraft:max_stack_size": 1,
 			"minecraft:display_name": {
 				"value": "§5Wooden Blade§r | §b20 Mana§r\n§8§oLog was here.\nGives you speed when clicked.\n15s cooldown."
@@ -16,6 +19,26 @@
 			"minecraft:hand_equipped": true,
 			"minecraft:icon": {
 				"texture": "magicalbladeenchantedwithwood"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "tev:speedyability"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "woodenblade",
+				"duration": 15
+			}
+		},
+		"events": {
+			"tev:speedyability": {
+				"run_command": {
+					"command": [
+						"/effect @s[scores={mana=20..}] speed 5 1 true",
+						"/scoreboard players remove @s[scores={mana=20..}] mana 20"
+					],
+					"target": "self"
+				}
 			}
 		}
 	}

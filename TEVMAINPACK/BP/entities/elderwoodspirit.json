@@ -1,0 +1,117 @@
+{
+    "format_version": "1.18.10",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "tev:elderwoodenspirit",
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "component_groups": {
+            "tev:spamcharge": {
+                "minecraft:on_hurt": {
+                    "target": "self",
+                    "event": "tev:changetonormal"
+                },
+                "minecraft:shooter": {
+                    "def": "minecraft:shulker"
+                }
+            }
+        },
+        "components": {
+            "minecraft:loot": {
+                "table": "loot_tables/leavesdrop.json"
+            },
+            "minecraft:attack": {
+                "damage": 8
+            },
+            "minecraft:collision_box": {
+                "width": 0.4,
+                "height": 0.8
+            },
+            "minecraft:movement": {
+                "value": 1
+            },
+            "minecraft:scale": {
+                "value": 3
+            },
+            "minecraft:health": {
+                "max": 170,
+                "value": 170
+            },
+            "minecraft:experience_reward": {
+                "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+            },
+            "minecraft:boss": {
+                "hud_range": 35,
+                "name": "Elder Wooden Spirit"
+            },
+            "minecraft:navigation.walk": {
+                "can_path_over_water": true
+            },
+            "minecraft:on_hurt": {
+                "event": "tev:spamchargestart",
+                "target": "self"
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:despawn": {
+                "despawn_from_distance": {}
+            },
+            "minecraft:can_climb": {},
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:behavior.charge_attack": {
+                "priority": 4
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 3,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "value": "player",
+                            "subject": "other"
+                        },
+                        "max_dist": 30
+                    }
+                ]
+            },
+            "minecraft:behavior.ram_attack": {
+                "priority": 0,
+                "ram_distance": 5,
+                "min_ram_distance": 2.0,
+                "knockback_force": 10.0,
+                "baby_knockback_modifier": 4,
+                "knockback_height": 0.1,
+                "run_speed": 1.0,
+                "ram_speed": 2.0,
+                "pre_ram_sound": "pre_ram",
+                "ram_impact_sound": "ram_impact",
+                "cooldown_range": [
+                    10.0,
+                    20.0
+                ]
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 9,
+                "look_distance": 6.0,
+                "probability": 0.02
+            },
+            "minecraft:physics": {
+                "has_collision": false,
+                "has_gravity": false
+            }
+        },
+        "events": {
+            "tev:changetonormal": {
+                "run_command": {
+                    "command": [
+                        "/summon shulker_bullet ^ ^ ^3",
+                        "/say test"
+                    ]
+                }
+            }
+        }
+    }
+}
