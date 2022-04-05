@@ -1,0 +1,170 @@
+{
+    "format_version": "1.18.20",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "tev:goatboss",
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "component_groups": {
+            "tev:frenzy": {
+                "minecraft:teleport": {
+                    "dark_teleport_chance": 0.1,
+                    "light_teleport_chance": 0.1,
+                    "max_random_teleport_time": 20,
+                    "min_random_teleport_time": 0,
+                    "random_teleport_cube": [
+                        3,
+                        1,
+                        3
+                    ],
+                    "random_teleports": true,
+                    "target_distance": 16,
+                    "target_teleport_chance": 1
+                }
+            },
+            "tev:knockbackothers": {
+                "minecraft:behavior.knockback_roar": {
+                    "duration": 1,
+                    "attack_time": 1,
+                    "cooldown_time": 1,
+                    "priority": 0,
+                    "knockback_damage": 8,
+                    "knockback_range": 5,
+                    "knockback_vertical_strength": 8,
+                    "knockback_horizontal_strength": 6,
+                    "on_roar_end": {
+                        "target": "self",
+                        "event": "tev:endknockback"
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:scale": {
+                "value": 2
+            },
+            "minecraft:health": {
+                "max": 150,
+                "value": 150
+            },
+            "minecraft:boss": {
+                "name": "Ancient Ram",
+                "hud_range": 55
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:movement": {
+                "value": 0.6
+            },
+            "minecraft:on_death": {
+                "target": "self",
+                "event": "tev:enterphase2"
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "on_damage": {
+                        "event": "tev:addknockback",
+                        "target": "self"
+                    }
+                }
+            },
+            "minecraft:navigation.walk": {
+                "can_path_over_water": true,
+                "avoid_water": true
+            },
+            "minecraft:attack": {
+                "damage": 5
+            },
+            "minecraft:ravager_blocked": {
+                "knockback_strength": 3.0,
+                "reaction_choices": [
+                    {
+                        "weight": 1,
+                        "value": {
+                            "event": "tev:teleportfrenzy",
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "weight": 1
+                    }
+                ]
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 3,
+                "melee_fov": 90.0,
+                "speed_multiplier": 1,
+                "track_target": false,
+                "require_complete_path": true
+            },
+            "minecraft:movement.generic": {},
+            "minecraft:jump.dynamic": {},
+            "minecraft:can_climb": {},
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 0,
+                "must_see": true,
+                "reselect_targets": true,
+                "within_radius": 25.0,
+                "must_see_forget_duration": 17.0,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        "max_dist": 160
+                    }
+                ]
+            }
+        },
+        "events": {
+            "tev:teleportfrenzy": {
+                "add": {
+                    "component_groups": [
+                        "tev:frenzy"
+                    ]
+                }
+            },
+            "tev:endknockback": {
+                "remove": {
+                    "component_groups": [
+                        "tev:knockbackothers"
+                    ]
+                }
+            },
+            "tev:addknockback": {
+                "add": {
+                    "component_groups": [
+                        "tev:knockbackothers"
+                    ]
+                },
+                "run_command": {
+                    "command": [
+                        "/particle tev:warningparticle ~ ~1.5 ~"
+                    ],
+                    "target": "self"
+                }
+            },
+            "tev:enterphase2": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+                                "/summon tev:goatbossphase2"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": "/particle tev:goatphase2particle ~ ~ ~"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

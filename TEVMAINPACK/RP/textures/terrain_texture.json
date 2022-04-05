@@ -6,6 +6,9 @@
 	"texture_data": {
 		"tev_berryore": {
 			"textures": "textures/blocks/berry_ore_west"
+		},
+		"tev_cryptactivator": {
+			"textures": "textures/blocks/cryptactivator"
 		}
 	}
 }

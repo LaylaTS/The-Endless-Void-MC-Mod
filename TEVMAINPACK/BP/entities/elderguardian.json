@@ -30,8 +30,8 @@
 			"minecraft:movement.sway": {},
 			"minecraft:jump.static": {},
 			"minecraft:health": {
-				"value": 260,
-				"max": 260
+				"value": 520,
+				"max": 520
 			},
 			"minecraft:hurt_on_condition": {
 				"damage_conditions": [

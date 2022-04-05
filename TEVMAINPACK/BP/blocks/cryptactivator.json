@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "tev:cryptactivator"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "tev_cryptactivator",
+					"render_method": "opaque"
+				}
+			}
+		}
+	}
+}

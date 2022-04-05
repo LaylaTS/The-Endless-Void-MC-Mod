@@ -2,12 +2,12 @@
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "witherboss:goatboss",
+			"identifier": "tev:goatboss",
 			"materials": {
 				"default": "goat"
 			},
 			"textures": {
-				"default": "textures/entity/goat/goat"
+				"default": "textures/entity/ancientram"
 			},
 			"geometry": {
 				"default": "geometry.goat"
@@ -27,7 +27,7 @@
 					"walk",
 					"look_at_target",
 					{
-						"attack": "variable.has_target&&variable.attack_time>=0"
+						"attack": "variable.has_target && variable.attack_time >= 0.0"
 					},
 					"ram_attack"
 				]

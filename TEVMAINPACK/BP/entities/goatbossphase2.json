@@ -1,0 +1,131 @@
+{
+    "format_version": "1.18.20",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "tev:goatbossphase2",
+            "is_spawnable": false,
+            "is_summonable": true
+        },
+        "component_groups": {
+            "tev:pierdzenie": {
+                "minecraft:behavior.knockback_roar": {
+                    "attack_time": 1,
+                    "cooldown_time": 1,
+                    "duration": 1,
+                    "knockback_range": 6,
+                    "knockback_damage": 5,
+                    "knockback_strength": 5,
+                    "priority": 0,
+                    "knockback_height_cap": 3,
+                    "on_roar_end": {
+                        "event": "tev:endroar"
+                    }
+                }
+            },
+            "tev:shootingphase": {
+                "minecraft:shooter": {
+                    "def": "llama_spit"
+                },
+                "minecraft:behavior.ranged_attack": {
+                    "priority": 0,
+                    "attack_interval": 0.1,
+                    "attack_radius": 15,
+                    "ranged_fov": 180
+                }
+            }
+        },
+        "components": {
+            "minecraft:on_target_escape": {
+                "event": "tev:startshooter"
+            },
+            "minecraft:on_target_acquired": {
+                "event": "tev:endshooter"
+            },
+            "minecraft:scale": {
+                "value": 2
+            },
+            "minecraft:target_nearby_sensor": {
+                "inside_range": 2.5,
+                "outside_range": 6.0,
+                "must_see": true,
+                "on_inside_range": {
+                    "event": "tev:startroar",
+                    "target": "self"
+                }
+            },
+            "minecraft:health": {
+                "max": 150,
+                "value": 150
+            },
+            "minecraft:boss": {
+                "name": "Ancient Ram",
+                "hud_range": 50
+            },
+            "minecraft:movement.generic": {},
+            "minecraft:navigation.generic": {},
+            "minecraft:movement": {
+                "value": 0.4
+            },
+            "minecraft:can_climb": {},
+            "minecraft:jump.static": {},
+            "minecraft:behavior.melee_attack": {
+                "priority": 1,
+                "speed_multiplier": 1.25,
+                "track_target": false,
+                "reach_multiplier": 0.0
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:attack": {
+                "damage": 0
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 1,
+                "must_see": true,
+                "must_see_forget_duration": 3.0,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        "max_dist": 160
+                    }
+                ]
+            }
+        },
+        "events": {
+            "tev:startroar": {
+                "add": {
+                    "component_groups": [
+                        "tev:pierdzenie"
+                    ]
+                }
+            },
+            "tev:endroar": {
+                "remove": {
+                    "component_groups": [
+                        "tev:pierdzenie"
+                    ]
+                }
+            },
+            "tev:endshooter": {
+                "remove": {
+                    "component_groups": [
+                        "tev:shootingphase"
+                    ]
+                }
+            },
+            "tev:startshooter": {
+                "add": {
+                    "component_groups": [
+                        "tev:shootingphase"
+                    ]
+                }
+            }
+        }
+    }
+}

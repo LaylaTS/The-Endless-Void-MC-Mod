@@ -13,9 +13,14 @@
             "minecraft:digger": {
                 "destroy_speeds": [
                     {
-                        ""
+                        "block": {
+                            "tags": "query.any_tag(wood)"
+                        }
                     }
                 ]
+            },
+            "minecraft:icon": {
+                "texture": "axe"
             }
         }
     }
