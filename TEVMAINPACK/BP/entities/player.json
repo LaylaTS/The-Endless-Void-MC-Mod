@@ -15,20 +15,6 @@
 				}
 			},
 			"tev:tankclass": {
-				"minecraft:rideable": {
-					"seat_count": 1,
-					"family_types": [
-						"player"
-					],
-					"seats": {
-						"position": [
-							0.0,
-							-0.15,
-							-0.35
-						],
-						"lock_rider_rotation": 0
-					}
-				},
 				"minecraft:environment_sensor": {
 					"triggers": {
 						"filters": {
@@ -41,9 +27,6 @@
 				"minecraft:health": {
 					"max": 40,
 					"value": 40
-				},
-				"minecraft:scale": {
-					"value": 1
 				}
 			},
 			"tev:deathmode": {
@@ -60,7 +43,7 @@
 					"value": 10
 				},
 				"minecraft:attack": {
-					"damage": 6,
+					"damage": 8,
 					"effect_duration": 2,
 					"effect_name": "slowness"
 				}
@@ -104,14 +87,6 @@
 			}
 		},
 		"components": {
-			"minecraft:interact": {
-				"interactions": {
-					"on_interact": {
-						"event": "tev:ridetank",
-						"target": "self"
-					}
-				}
-			},
 			"minecraft:experience_reward": {
 				"on_death": "math.min(query.player_level*7,100)"
 			},

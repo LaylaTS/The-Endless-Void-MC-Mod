@@ -34,3 +34,4 @@ item.tev:woodenblade=§5Wooden Blade§r | §b20 Mana§r\n§8§oLog was here.\nGi
 item.tev:woodenblade=§5Wooden Blade§r | §b20 Mana§r\n§8§oLog was here.\nGives you speed when clicked.\n15s cooldown.
 item.tev:woodenblade=§5Wooden Blade§r | §b20 Mana§r\n§8§oLog was here.\nGives you speed when clicked.\n15s cooldown.
 tile.tev:cryptactivator.name=Crypt Activator
+tile.tev:cryptactivatorclosed.name=closedcryptactivator

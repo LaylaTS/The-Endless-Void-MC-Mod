@@ -35,12 +35,6 @@
             }
         },
         "components": {
-            "minecraft:on_target_escape": {
-                "event": "tev:startshooter"
-            },
-            "minecraft:on_target_acquired": {
-                "event": "tev:endshooter"
-            },
             "minecraft:scale": {
                 "value": 2
             },
@@ -51,6 +45,12 @@
                 "on_inside_range": {
                     "event": "tev:startroar",
                     "target": "self"
+                }
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "projectile",
+                    "deals_damage": false
                 }
             },
             "minecraft:health": {

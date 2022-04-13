@@ -1,0 +1,54 @@
+{
+    "format_version": "1.18.30",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "tev:smallgolem",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:movement": {
+                "value": 0.4
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/smallgolem.json"
+            },
+            "minecraft:behavior.melee_attack": {
+                "on_attack": {
+                    "event": "tev:escapetp"
+                }
+            },
+            "minecraft:health": {
+                "value": 10,
+                "max": 11
+            },
+            "minecraft:scale": {
+                "value": 0.4
+            },
+            "minecraft:attack": {
+                "damage": 5
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:movement.generic": {},
+            "minecraft:navigation.generic": {},
+            "minecraft:can_climb": {},
+            "minecraft:behavior.nearest_attackable_target": {
+                "entity_types": {
+                    "filters": {
+                        "any_of": [
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "player"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

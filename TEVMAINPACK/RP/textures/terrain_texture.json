@@ -9,6 +9,9 @@
 		},
 		"tev_cryptactivator": {
 			"textures": "textures/blocks/cryptactivator"
+		},
+		"tev_cryptactivatorclosed": {
+			"textures": "textures/blocks/cryptactivatorclosed"
 		}
 	}
 }
