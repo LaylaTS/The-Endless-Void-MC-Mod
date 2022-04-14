@@ -121,6 +121,21 @@
 		},
 		"magicalbladeenchantedwithwood": {
 			"textures": "textures/items/magicalbladeenchantedwithwood"
+		},
+		"tev_compressedbones": {
+			"textures": "textures/items/compressedbones"
+		},
+		"tev_sculkedessence": {
+			"textures": "textures/items/sculkedessence"
+		},
+		"sculkore_shard": {
+			"textures": "textures/items/sculkore_shard"
+		},
+		"tev_sculkoreshard": {
+			"textures": "textures/items/sculkore_shard"
+		},
+		"tev_sculkshard": {
+			"textures": "textures/items/sculkore_shard"
 		}
 	}
 }

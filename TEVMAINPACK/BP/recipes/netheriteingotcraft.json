@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tev:netheriteingotcraft"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "BBB",
+            "BGB",
+            "BBB"
+        ],
+        "key": {
+            "B": {
+                "item": "tev:sculkedessence"
+            },
+            "G": {
+                "item": "diamond"
+            }
+        },
+        "result": {
+            "item": "netherite_ingot"
+        }
+    }
+}

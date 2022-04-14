@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:sculkshard",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tev_sculkshard"
+			},
+			"minecraft:display_name": {
+				"value": "§3Sculk Shard"
+			},
+			"minecraft:max_stack_size": 64,
+			"minecraft:foil": true
+		}
+	}
+}

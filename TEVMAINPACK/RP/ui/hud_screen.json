@@ -241,7 +241,7 @@
         "shadow": true,
         "text": "#level_number",
         "color": "$experience_text_color",
-        "anchor_from": "top_middle",
+        "anchor_from": "top_right",
         "anchor_to": "bottom_middle",
         "bindings": [
             {
@@ -2096,8 +2096,8 @@
                                             "type": "label",
                                             "layer": 1,
                                             "font_type": "smooth",
-                                            "anchor_from": "top_middle",
-                                            "anchor_to": "top_middle",
+                                            "anchor_from": "top_right",
+                                            "anchor_to": "top_right",
                                             "offset": [
                                                 0,
                                                 1
@@ -2474,8 +2474,8 @@
             182,
             20
         ],
-        "anchor_from": "top_middle",
-        "anchor_to": "top_middle",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
         "$progress_bar_collection": "boss_bars",
         "controls": [
             {
@@ -2505,8 +2505,8 @@
         "grid_item_template": "hud.boss_health_panel",
         "grid_fill_direction": "vertical",
         "collection_name": "boss_bars",
-        "anchor_to": "top_middle",
-        "anchor_from": "top_middle",
+        "anchor_to": "top_right",
+        "anchor_from": "top_right",
         "size": [
             182,
             "30%"

@@ -2,19 +2,18 @@
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "berry:berryore"
+			"identifier": "sculkore:ore"
 		},
 		"components": {
 			"minecraft:unit_cube": {},
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "tev_berryore",
+					"texture": "tev_sculkore",
 					"render_method": "opaque"
 				}
 			},
-			"minecraft:loot": "loot_tables/blocks/berry_berryore.json",
-			"minecraft:destroy_time": 20,
-			"tag:tev:berry": {}
+			"minecraft:destroy_time": 10,
+			"minecraft:loot": "loot_tables/sculkore_ore.json"
 		}
 	}
 }

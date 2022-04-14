@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tev:sculkedessencecraft"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "BBB",
+            "BCB",
+            "BBB"
+        ],
+        "key": {
+            "B": {
+                "item": "dungeonupdate1:shard"
+            },
+            "C": {
+                "item": "tev:sculkshard"
+            }
+        },
+        "result": {
+            "item": "tev:sculkedessence"
+        }
+    }
+}
