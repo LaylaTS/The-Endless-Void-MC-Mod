@@ -1,0 +1,24 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tev:thoriumboots"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "   ",
+            "B B",
+            "B B"
+        ],
+        "key": {
+            "B": {
+                "item": "tev:thoriumingot"
+            }
+        },
+        "result": {
+            "item": "tev:thorium_boots"
+        }
+    }
+}

@@ -136,6 +136,9 @@
 		},
 		"tev_sculkshard": {
 			"textures": "textures/items/sculkore_shard"
+		},
+		"tev_thoriumingot": {
+			"textures": "textures/items/thoriumingot"
 		}
 	}
 }

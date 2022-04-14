@@ -1,0 +1,30 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tev:thoriumingotcraft"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "BBB",
+            "CDC",
+            "BBB"
+        ],
+        "key": {
+            "B": {
+                "item": "tev:thoriumessence"
+            },
+            "C": {
+                "item": "tev:sculkedessence"
+            },
+            "D": {
+                "item": "netherite_ingot"
+            }
+        },
+        "result": {
+            "item": "tev:thoriumingot"
+        }
+    }
+}

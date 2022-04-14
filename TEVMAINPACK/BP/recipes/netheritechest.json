@@ -1,0 +1,24 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tev:netheritechest"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "B B",
+            "BBB",
+            "BBB"
+        ],
+        "key": {
+            "B": {
+                "item": "netherite_ingot"
+            }
+        },
+        "result": {
+            "item": "netherite_chestplate"
+        }
+    }
+}
