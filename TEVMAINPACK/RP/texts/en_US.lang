@@ -41,3 +41,7 @@ item.tev:sculkoreshard=sculkore
 item.tev:sculkshard=sculkshard
 tile.tev:sculkore.name=sculkore
 item.tev:thoriumingot=thoriumingot
+item.tev:truenetherite_helmet=True Netherite Helmet
+item.tev:truenetherite_chestplate=True Netherite Chestplate
+item.tev:truenetherite_leggings=True Netherite Leggings
+item.tev:truenetherite_boots=True Netherite Boots

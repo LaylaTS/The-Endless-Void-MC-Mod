@@ -1,0 +1,40 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:truenetherite_boots",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:enchantable": {
+				"value": 9,
+				"slot": "armor_feet"
+			},
+			"minecraft:durability": {
+				"max_durability": 195,
+				"damage_chance": {
+					"min": 0,
+					"max": 0
+				}
+			},
+			"minecraft:display_name": {
+				"value": "Netherite Boots"
+			},
+			"minecraft:icon": {
+				"texture": "tev_truenetherite_boots"
+			},
+			"minecraft:render_offsets": "boots",
+			"minecraft:armor": {
+				"protection": 4,
+				"texture_type": "netherite"
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.feet"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.boots"
+			}
+		}
+	}
+}

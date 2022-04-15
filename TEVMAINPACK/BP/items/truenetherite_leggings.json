@@ -1,0 +1,39 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:truenetherite_leggings",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:enchantable": {
+				"value": 9,
+				"slot": "armor_legs"
+			},
+			"minecraft:durability": {
+				"max_durability": 225,
+				"damage_chance": {
+					"min": 0,
+					"max": 0
+				}
+			},
+			"minecraft:display_name": {
+				"value": "Netherite Leggings"
+			},
+			"minecraft:icon": {
+				"texture": "tev_truenetherite_leggings"
+			},
+			"minecraft:render_offsets": "leggings",
+			"minecraft:armor": {
+				"protection": 4
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.leggings"
+			}
+		}
+	}
+}

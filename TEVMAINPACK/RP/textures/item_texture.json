@@ -139,6 +139,18 @@
 		},
 		"tev_thoriumingot": {
 			"textures": "textures/items/thoriumingot"
+		},
+		"tev_truenetherite_helmet": {
+			"textures": "textures/items/truenetherite_helmet"
+		},
+		"tev_truenetherite_chestplate": {
+			"textures": "textures/items/truenetherite_chestplate"
+		},
+		"tev_truenetherite_leggings": {
+			"textures": "textures/items/truenetherite_leggings"
+		},
+		"tev_truenetherite_boots": {
+			"textures": "textures/items/truenetherite_boots"
 		}
 	}
 }
