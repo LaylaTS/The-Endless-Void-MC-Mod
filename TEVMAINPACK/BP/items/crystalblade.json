@@ -21,7 +21,7 @@
 			"minecraft:display_name": {
 				"value": "§5Crystal Blade"
 			},
-			"minecraft:damage": 40,
+			"minecraft:damage": 30,
 			"minecraft:icon": {
 				"texture": "tev_crystalblade"
 			},

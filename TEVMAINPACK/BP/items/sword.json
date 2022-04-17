@@ -24,7 +24,7 @@
 				}
 			},
 			"minecraft:mining_speed": 1,
-			"minecraft:damage": 20,
+			"minecraft:damage": 18,
 			"minecraft:enchantable": {
 				"value": 15,
 				"slot": "sword"

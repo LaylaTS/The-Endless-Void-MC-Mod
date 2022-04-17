@@ -22,8 +22,8 @@
 			"minecraft:durability": {
 				"max_durability": 1009999999999999,
 				"damage_chance": {
-					"min": 60,
-					"max": 100
+					"min": 0,
+					"max": 0
 				}
 			},
 			"minecraft:mining_speed": 1,

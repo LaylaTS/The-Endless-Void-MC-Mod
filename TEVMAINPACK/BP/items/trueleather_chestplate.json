@@ -1,0 +1,39 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:trueleather_chestplate",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:enchantable": {
+				"value": 9,
+				"slot": "armor_torso"
+			},
+			"minecraft:display_name": {
+				"value": "Leather Chestplate"
+			},
+			"minecraft:durability": {
+				"max_durability": 240,
+				"damage_chance": {
+					"min": 0,
+					"max": 0
+				}
+			},
+			"minecraft:icon": {
+				"texture": "tev_trueleather_chestplate"
+			},
+			"minecraft:render_offsets": "chestplates",
+			"minecraft:armor": {
+				"protection": 2
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.chest"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.chestplate"
+			}
+		}
+	}
+}

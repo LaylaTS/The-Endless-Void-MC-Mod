@@ -63,26 +63,6 @@
 		"witherweapons_withermenace": {
 			"textures": "textures/items/withermenace"
 		},
-		"witherweapons_blazingplate_helmet": {
-			"textures": [
-				"textures/items/blazingplate_helmet"
-			]
-		},
-		"witherweapons_blazingplate_chestplate": {
-			"textures": [
-				"textures/items/blazingplate_chestplate"
-			]
-		},
-		"witherweapons_blazingplate_leggings": {
-			"textures": [
-				"textures/items/blazingplate_leggings"
-			]
-		},
-		"witherweapons_blazingplate_boots": {
-			"textures": [
-				"textures/items/blazingplate_boots"
-			]
-		},
 		"witherweapons_travelboots": {
 			"textures": "textures/items/boots"
 		},
@@ -151,6 +131,54 @@
 		},
 		"tev_truenetherite_boots": {
 			"textures": "textures/items/truenetherite_boots"
+		},
+		"trueleather_helmet": {
+			"textures": "textures/items/trueleather_helmet"
+		},
+		"tev_trueleather_chestplate": {
+			"textures": "textures/items/trueleather_chestplate"
+		},
+		"tev_trueleather_leggings": {
+			"textures": "textures/items/trueleather_leggings"
+		},
+		"tev_trueleather_boots": {
+			"textures": "textures/items/trueleather_boots"
+		},
+		"tev_iron_helmet": {
+			"textures": "textures/items/iron_helmet"
+		},
+		"tev_iron_chestplate": {
+			"textures": "textures/items/iron_chestplate"
+		},
+		"tev_iron_leggings": {
+			"textures": "textures/items/iron_leggings"
+		},
+		"tev_iron_boots": {
+			"textures": "textures/items/iron_boots"
+		},
+		"tev_trueiron_helmet": {
+			"textures": "textures/items/trueiron_helmet"
+		},
+		"tev_trueiron_chestplate": {
+			"textures": "textures/items/trueiron_chestplate"
+		},
+		"tev_trueiron_leggings": {
+			"textures": "textures/items/trueiron_leggings"
+		},
+		"tev_trueiron_boots": {
+			"textures": "textures/items/trueiron_boots"
+		},
+		"tev_truediamond_helmet": {
+			"textures": "textures/items/truediamond_helmet"
+		},
+		"tev_truediamond_chestplate": {
+			"textures": "textures/items/truediamond_chestplate"
+		},
+		"tev_truediamond_leggings": {
+			"textures": "textures/items/truediamond_leggings"
+		},
+		"tev_truediamond_boots": {
+			"textures": "textures/items/truediamond_boots"
 		}
 	}
 }

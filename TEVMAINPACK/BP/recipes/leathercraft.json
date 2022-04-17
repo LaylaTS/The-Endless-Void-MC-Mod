@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tev:leathercraft"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "B B",
+            "BCB",
+            " B "
+        ],
+        "key": {
+            "B": {
+                "item": "string"
+            },
+            "C": {
+                "item": "rotten_flesh"
+            }
+        },
+        "result": {
+            "item": "leather"
+        }
+    }
+}
