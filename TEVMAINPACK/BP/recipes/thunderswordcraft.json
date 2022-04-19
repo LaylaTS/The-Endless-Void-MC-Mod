@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tev:thunderswordcraft"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "  B",
+            " B ",
+            "G  "
+        ],
+        "key": {
+            "B": {
+                "item": "tev:sculkedessence"
+            },
+            "G": {
+                "item": "stick"
+            }
+        },
+        "result": {
+            "item": "pa:thundersword"
+        }
+    }
+}

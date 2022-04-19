@@ -2,23 +2,29 @@
     "format_version": "1.12",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "minecraft:iron_leggings"
+            "identifier": "tev:goatsummoncraft"
         },
         "tags": [
             "crafting_table"
         ],
         "pattern": [
-            "XXX",
-            "X X",
-            "X X"
+            "DCD",
+            "XCX",
+            "DCD"
         ],
         "key": {
             "X": {
                 "item": "minecraft:iron_ingot"
+            },
+            "C": {
+                "item": "leaves"
+            },
+            "D": {
+                "item": "string"
             }
         },
         "result": {
-            "item": "diamond_leggings"
+            "item": "tev:summongoatboss"
         }
     }
 }

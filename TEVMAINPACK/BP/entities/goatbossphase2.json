@@ -12,7 +12,7 @@
                     "attack_time": 1,
                     "cooldown_time": 1,
                     "duration": 1,
-                    "knockback_range": 6,
+                    "knockback_range": 5.5,
                     "knockback_damage": 5,
                     "knockback_strength": 5,
                     "priority": 0,
@@ -54,8 +54,8 @@
                 }
             },
             "minecraft:health": {
-                "max": 150,
-                "value": 150
+                "max": 120,
+                "value": 120
             },
             "minecraft:boss": {
                 "name": "Ancient Ram",

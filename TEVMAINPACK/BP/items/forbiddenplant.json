@@ -1,0 +1,40 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:forbiddenplant",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "tev_forbiddenplant"
+			},
+			"minecraft:display_name": {
+				"value": "§4Tank§r | §1Accessory§r | §9Forbidden Plant§r\n§o§8Accessory - equip in the accessory slot (shield).\n§o§8Heals nearby allies when you die."
+			},
+			"minecraft:wearable": {
+				"slot": "slot.weapon.offhand",
+				"dispensable": true
+			},
+			"minecraft:render_offsets": {
+				"off_hand": {
+					"first_person": {
+						"scale": [
+							0.001,
+							0.001,
+							0.001
+						]
+					},
+					"third_person": {
+						"scale": [
+							0.001,
+							0.001,
+							0.001
+						]
+					}
+				}
+			}
+		}
+	}
+}

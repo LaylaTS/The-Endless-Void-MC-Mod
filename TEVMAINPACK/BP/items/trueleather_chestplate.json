@@ -14,13 +14,6 @@
 			"minecraft:display_name": {
 				"value": "Leather Chestplate"
 			},
-			"minecraft:durability": {
-				"max_durability": 240,
-				"damage_chance": {
-					"min": 0,
-					"max": 0
-				}
-			},
 			"minecraft:icon": {
 				"texture": "tev_trueleather_chestplate"
 			},

@@ -12,8 +12,8 @@
             },
             "minecraft:attack": {
                 "damage": 4,
-                "effect_duration": 3,
-                "effect_name": "darkness"
+                "effect_duration": 1,
+                "effect_name": "blindness"
             },
             "minecraft:collision_box": {
                 "width": 0.4,

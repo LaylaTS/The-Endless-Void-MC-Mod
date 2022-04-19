@@ -20,14 +20,14 @@
                 }
             },
             "minecraft:health": {
-                "value": 10,
+                "value": 8,
                 "max": 11
             },
             "minecraft:scale": {
                 "value": 0.4
             },
             "minecraft:attack": {
-                "damage": 5
+                "damage": 2
             },
             "minecraft:physics": {
                 "has_collision": true,

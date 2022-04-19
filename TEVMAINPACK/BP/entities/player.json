@@ -8,25 +8,22 @@
 			"is_experimental": false
 		},
 		"component_groups": {
-			"tev:mainhealth": {
+			"tev:mageclass": {
 				"minecraft:health": {
-					"max": 20,
-					"value": 20
+					"value": 20,
+					"max": 20
+				},
+				"minecraft:attack": {
+					"damage": 1
 				}
 			},
 			"tev:tankclass": {
-				"minecraft:environment_sensor": {
-					"triggers": {
-						"filters": {
-							"test": "in_water",
-							"subject": "self"
-						},
-						"event": "tev:tankstoprider"
-					}
-				},
 				"minecraft:health": {
 					"max": 40,
 					"value": 40
+				},
+				"minecraft:attack": {
+					"damage": 1
 				}
 			},
 			"tev:deathmode": {
@@ -46,43 +43,6 @@
 					"damage": 8,
 					"effect_duration": 2,
 					"effect_name": "slowness"
-				}
-			},
-			"minecraft:add_bad_omen": {
-				"minecraft:spell_effects": {
-					"add_effects": [
-						{
-							"effect": "bad_omen",
-							"duration": 6000,
-							"visible": false,
-							"display_on_screen_animation": true
-						}
-					]
-				},
-				"minecraft:timer": {
-					"time": [
-						0,
-						0
-					],
-					"looping": false,
-					"time_down_event": {
-						"event": "minecraft:clear_add_bad_omen",
-						"target": "self"
-					}
-				}
-			},
-			"minecraft:clear_bad_omen_spell_effect": {
-				"minecraft:spell_effects": {}
-			},
-			"minecraft:raid_trigger": {
-				"minecraft:raid_trigger": {
-					"triggered_event": {
-						"event": "minecraft:remove_raid_trigger",
-						"target": "self"
-					}
-				},
-				"minecraft:spell_effects": {
-					"remove_effects": "bad_omen"
 				}
 			}
 		},
@@ -105,7 +65,7 @@
 			},
 			"minecraft:can_climb": {},
 			"minecraft:movement": {
-				"value": 0.1
+				"value": 0.11
 			},
 			"minecraft:hurt_on_condition": {
 				"damage_conditions": [
@@ -117,7 +77,7 @@
 							"value": true
 						},
 						"cause": "lava",
-						"damage_per_tick": 4
+						"damage_per_tick": 6
 					}
 				]
 			},
@@ -133,7 +93,7 @@
 			},
 			"minecraft:player.level": {
 				"value": 0,
-				"max": 24791
+				"max": 500
 			},
 			"minecraft:player.experience": {
 				"value": 0,
@@ -195,28 +155,34 @@
 				]
 			},
 			"minecraft:conditional_bandwidth_optimization": {},
-			"minecraft:block_climber": {},
-			"minecraft:environment_sensor": {
-				"triggers": {
-					"filters": {
-						"all_of": [
-							{
-								"test": "has_mob_effect",
-								"subject": "self",
-								"value": "bad_omen"
-							},
-							{
-								"test": "is_in_village",
-								"subject": "self",
-								"value": true
-							}
-						]
-					},
-					"event": "minecraft:trigger_raid"
-				}
-			}
+			"minecraft:block_climber": {}
 		},
 		"events": {
+			"tev:magetoggle": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"tev:tankclass",
+								"tev:assassinclass"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"tev:mageclass"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "/scoreboard players set @s class 2",
+							"target": "self"
+						}
+					}
+				]
+			},
 			"tev:removehardmode": {
 				"remove": {
 					"component_groups": [
@@ -231,39 +197,6 @@
 					]
 				}
 			},
-			"minecraft:gain_bad_omen": {
-				"add": {
-					"component_groups": [
-						"minecraft:add_bad_omen"
-					]
-				}
-			},
-			"minecraft:clear_add_bad_omen": {
-				"remove": {
-					"component_groups": [
-						"minecraft:add_bad_omen"
-					]
-				},
-				"add": {
-					"component_groups": [
-						"minecraft:clear_bad_omen_spell_effect"
-					]
-				}
-			},
-			"minecraft:trigger_raid": {
-				"add": {
-					"component_groups": [
-						"minecraft:raid_trigger"
-					]
-				}
-			},
-			"minecraft:remove_raid_trigger": {
-				"remove": {
-					"component_groups": [
-						"minecraft:raid_trigger"
-					]
-				}
-			},
 			"tev:hardmode": {
 				"run_command": {
 					"command": [
@@ -273,62 +206,54 @@
 				}
 			},
 			"tev:assassintoggle": {
-				"add": {
-					"component_groups": [
-						"tev:assassinclass"
-					]
-				}
-			},
-			"tev:assassindisable": {
-				"remove": {
-					"component_groups": [
-						"tev:assassinclass"
-					]
-				}
-			},
-			"tev:ridetank": {
-				"run_command": {
-					"command": [
-						"/ride @p[rm=1,r=6] start_riding @s"
-					],
-					"target": "self"
-				}
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"tev:mageclass",
+								"tev:tankclass"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"tev:assassinclass"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "/scoreboard players set @s class 1",
+							"target": "self"
+						}
+					}
+				]
 			},
 			"tev:tanktoggle": {
-				"add": {
-					"component_groups": [
-						"tev:tankclass"
-					]
-				}
-			},
-			"tev:tankdisable": {
-				"remove": {
-					"component_groups": [
-						"tev:tankclass"
-					]
-				}
-			},
-			"tev:tankstoprider": {
-				"run_command": {
-					"target": "self",
-					"command": [
-						"/ride @a[r=3] stop_riding"
-					]
-				}
-			},
-			"tev:healthreset": {
-				"add": {
-					"component_groups": [
-						"tev:mainhealth"
-					]
-				}
-			},
-			"tev:healthreset2": {
-				"remove": {
-					"component_groups": [
-						"tev:mainhealth"
-					]
-				}
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"tev:mageclass",
+								"tev:assassinclass"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"tev:tankclass"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "/scoreboard players set @s class 3",
+							"target": "self"
+						}
+					}
+				]
 			}
 		}
 	}

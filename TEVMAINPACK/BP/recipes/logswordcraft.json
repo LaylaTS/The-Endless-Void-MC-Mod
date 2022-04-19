@@ -1,0 +1,30 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tev:logswordcraft"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " XX",
+            " BX",
+            "C  "
+        ],
+        "key": {
+            "X": {
+                "item": "leaves"
+            },
+            "B": {
+                "item": "wood"
+            },
+            "C": {
+                "item": "stick"
+            }
+        },
+        "result": {
+            "item": "tev:woodenblade"
+        }
+    }
+}

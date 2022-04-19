@@ -179,6 +179,24 @@
 		},
 		"tev_truediamond_boots": {
 			"textures": "textures/items/truediamond_boots"
+		},
+		"tev_summongoatboss": {
+			"textures": "textures/items/summongoatboss"
+		},
+		"kaksword1_nikczemneostrze": {
+			"textures": "textures/items/kaksword1_nikczemneostrze"
+		},
+		"pa_thundersword": {
+			"textures": "textures/items/pa_thundersword"
+		},
+		"kaksword1_glitchsword": {
+			"textures": "textures/items/kaksword1_glitchsword"
+		},
+		"kakwand_amethystsword": {
+			"textures": "textures/items/kakwand_amethystwand"
+		},
+		"tev_forbiddenplant": {
+			"textures": "textures/items/forbiddenplant"
 		}
 	}
 }

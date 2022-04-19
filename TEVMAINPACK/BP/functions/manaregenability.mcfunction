@@ -1,0 +1,1 @@
+scoreboard players add @a[r=7] mana 10

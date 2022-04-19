@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:summongoatboss",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tev_summongoatboss"
+			},
+			"minecraft:display_name": {
+				"value": "Crypt Opener\n§8§oUse it when standing on the entrence to the goat crypt."
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "tev:startfight"
+				}
+			}
+		},
+		"events": {
+			"tev:startfight": {
+				"run_command": {
+					"command": "/setblock 30019 15 30065 redstone_block"
+				}
+			}
+		}
+	}
+}
