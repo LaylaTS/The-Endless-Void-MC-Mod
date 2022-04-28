@@ -45,12 +45,12 @@
                 "value": 2
             },
             "minecraft:health": {
-                "max": 120,
-                "value": 120
+                "max": 160,
+                "value": 160
             },
             "minecraft:boss": {
                 "name": "Ancient Ram",
-                "hud_range": 35
+                "hud_range": 25
             },
             "minecraft:physics": {
                 "has_collision": true,

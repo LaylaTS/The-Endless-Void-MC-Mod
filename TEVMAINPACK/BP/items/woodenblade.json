@@ -13,7 +13,7 @@
 			"minecraft:display_name": {
 				"value": "§5Wooden Blade§r | §b20 Mana§r\n§8§oLog was here.\nGives you speed when clicked.\n15s cooldown."
 			},
-			"minecraft:damage": 6,
+			"minecraft:damage": 7,
 			"minecraft:can_destroy_in_creative": false,
 			"minecraft:weapon": {},
 			"minecraft:hand_equipped": true,

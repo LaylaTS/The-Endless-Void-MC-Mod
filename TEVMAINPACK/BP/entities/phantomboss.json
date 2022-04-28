@@ -1,0 +1,122 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "tev:phantomboss",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {},
+        "components": {
+            "minecraft:loot": {
+                "table": "loot_tables/entities/phantom.json"
+            },
+            "minecraft:scale": {
+                "value": 9
+            },
+            "minecraft:nameable": {},
+            "minecraft:health": {
+                "value": 800,
+                "max": 800
+            },
+            "minecraft:boss": {
+                "hud_range": 350,
+                "name": "The Phantasm (Phase 1)",
+                "should_darken_sky": true
+            },
+            "minecraft:physics": {
+                "has_gravity": false
+            },
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:attack": {
+                "damage": 12
+            },
+            "minecraft:collision_box": {
+                "width": 0.9,
+                "height": 0.5
+            },
+            "minecraft:movement": {
+                "value": 3
+            },
+            "minecraft:movement.glide": {
+                "start_speed": 3,
+                "speed_when_turning": 2
+            },
+            "minecraft:follow_range": {
+                "value": 640,
+                "max": 640
+            },
+            "minecraft:timer": {
+                "looping": true,
+                "time": 12,
+                "time_down_event": {
+                    "event": "tev:attackmodetoggle"
+                }
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 1,
+                "reselect_targets": true,
+                "scan_interval": 1,
+                "within_radius": 640.0,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        "max_dist": 640
+                    }
+                ]
+            },
+            "minecraft:behavior.swoop_attack": {
+                "damage_reach": 0.2,
+                "speed_multiplier": 2,
+                "delay_range": [
+                    1,
+                    2
+                ],
+                "priority": 0
+            },
+            "minecraft:behavior.circle_around_anchor": {
+                "priority": 3,
+                "radius_change": 1.0,
+                "goal_radius": 1.0,
+                "angle_change": 15.0,
+                "radius_range": [
+                    25,
+                    40
+                ],
+                "height_above_target_range": [
+                    10.0,
+                    4
+                ]
+            }
+        },
+        "events": {
+            "tev:attackmodetoggle": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": "/particle tev:phantasmparticle"
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": "/teleport @s ^ ^ ^40"
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": "/execute @a[r=250] ~ ~ ~ playsound mob.phantom.swoop @s ~ ~ ~"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

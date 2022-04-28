@@ -197,6 +197,9 @@
 		},
 		"tev_forbiddenplant": {
 			"textures": "textures/items/forbiddenplant"
+		},
+		"tev_trueaxe": {
+			"textures": "textures/items/trueaxe"
 		}
 	}
 }

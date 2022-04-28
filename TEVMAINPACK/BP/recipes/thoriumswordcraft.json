@@ -2,32 +2,26 @@
     "format_version": "1.12",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "tev:logswordcraft"
+            "identifier": "tev:thoriumswordcraft"
         },
         "tags": [
             "crafting_table"
         ],
         "pattern": [
-            " XZ",
-            " BX",
-            "C  "
+            "  B",
+            " B ",
+            "G  "
         ],
         "key": {
-            "Z": {
-                "item": "iron_ingot"
-            },
-            "X": {
-                "item": "leaves"
-            },
             "B": {
-                "item": "wood"
+                "item": "tev:thoriumingot"
             },
-            "C": {
+            "G": {
                 "item": "stick"
             }
         },
         "result": {
-            "item": "tev:woodenblade"
+            "item": "tev:thoriumsword"
         }
     }
 }

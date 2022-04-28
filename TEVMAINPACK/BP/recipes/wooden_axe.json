@@ -2,23 +2,26 @@
     "format_version": "1.12",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "minecraft:iron_leggings"
+            "identifier": "minecraft:axe_wood"
         },
         "tags": [
             "crafting_table"
         ],
         "pattern": [
-            "XXX",
-            "X X",
-            "X X"
+            "XX",
+            "X#",
+            " #"
         ],
         "key": {
+            "#": {
+                "item": "minecraft:stick"
+            },
             "X": {
-                "item": "minecraft:iron_ingot"
+                "item": "planks"
             }
         },
         "result": {
-            "item": "tev:trueiron_leggings"
+            "item": "tev:trueaxe"
         }
     }
 }

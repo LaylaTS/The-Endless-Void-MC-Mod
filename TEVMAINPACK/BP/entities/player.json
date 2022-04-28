@@ -15,6 +15,12 @@
 				},
 				"minecraft:attack": {
 					"damage": 1
+				},
+				"minecraft:movement": {
+					"value": 0.1
+				},
+				"minecraft:knockback_resistance": {
+					"value": 0
 				}
 			},
 			"tev:tankclass": {
@@ -24,6 +30,12 @@
 				},
 				"minecraft:attack": {
 					"damage": 1
+				},
+				"minecraft:movement": {
+					"value": 0.8
+				},
+				"minecraft:knockback_resistance": {
+					"value": 0.5
 				}
 			},
 			"tev:deathmode": {
@@ -36,17 +48,26 @@
 			},
 			"tev:assassinclass": {
 				"minecraft:health": {
-					"max": 10,
-					"value": 10
+					"max": 15,
+					"value": 15
 				},
 				"minecraft:attack": {
 					"damage": 8,
 					"effect_duration": 2,
 					"effect_name": "slowness"
+				},
+				"minecraft:movement": {
+					"value": 0.13
+				},
+				"minecraft:knockback_resistance": {
+					"value": 0
 				}
 			}
 		},
 		"components": {
+			"minecraft:on_death": {
+				"event": "tev:ondeathevent"
+			},
 			"minecraft:experience_reward": {
 				"on_death": "math.min(query.player_level*7,100)"
 			},
@@ -204,6 +225,26 @@
 					],
 					"target": "self"
 				}
+			},
+			"tev:ondeathevent": {
+				"sequence": [
+					{
+						/* Forbidden Plant Ability*/
+						"sequence": [
+							{
+								"filters": {
+									"test": "has_equipment",
+									"subject": "self",
+									"value": "tev:forbiddenplant",
+									"domain": "hand"
+								},
+								"run_command": {
+									"command": "/summon bat"
+								}
+							}
+						]
+					}
+				]
 			},
 			"tev:assassintoggle": {
 				"sequence": [
