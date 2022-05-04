@@ -9,7 +9,7 @@
 				"head": "blaze_head"
 			},
 			"textures": {
-				"default": "textures/entity/blaze"
+				"default": "textures/entity/blazeboss"
 			},
 			"geometry": {
 				"default": "geometry.blaze"

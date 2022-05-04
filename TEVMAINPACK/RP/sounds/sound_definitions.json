@@ -1,3 +1,11 @@
 {
-	"sound_definitions": {}
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"sculked.lands": {
+			"category": "music",
+			"sounds": [
+				"sounds/sculkedlands"
+			]
+		}
+	}
 }

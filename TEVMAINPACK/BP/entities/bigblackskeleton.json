@@ -51,7 +51,8 @@
 			"minecraft:can_climb": {},
 			"minecraft:boss": {
 				"should_darken_sky": true,
-				"hud_range": 25
+				"hud_range": 25,
+				"name": "Big Black Skeleton"
 			},
 			"minecraft:shareables": {
 				"items": [

@@ -1,5 +1,5 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.18.20",
 	"minecraft:entity": {
 		"description": {
 			"identifier": "minecraft:player",
@@ -42,14 +42,14 @@
 				"minecraft:damage_sensor": {
 					"triggers": {
 						"cause": "all",
-						"damage_multiplier": 1000
+						"damage_multiplier": 10000000
 					}
 				}
 			},
 			"tev:assassinclass": {
 				"minecraft:health": {
-					"max": 15,
-					"value": 15
+					"max": 16,
+					"value": 16
 				},
 				"minecraft:attack": {
 					"damage": 8,
@@ -239,10 +239,20 @@
 									"domain": "hand"
 								},
 								"run_command": {
-									"command": "/summon bat"
+									"command": "/effect @a[r=8] instant_health 0 1"
 								}
 							}
 						]
+					},
+					{
+						/* FOG RESET */
+						"run_command": {
+							"command": [
+								"/fog @s push minecraft:fog_default mainfog",
+								"/fog @s remove mainfog",
+								"/fog @s remove mainfog"
+							]
+						}
 					}
 				]
 			},

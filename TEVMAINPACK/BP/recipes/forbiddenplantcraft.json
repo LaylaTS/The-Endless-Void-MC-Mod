@@ -2,26 +2,26 @@
     "format_version": "1.12",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "tev:sculkedessencecraft"
+            "identifier": "tev:forbiddenplantcraft"
         },
         "tags": [
             "crafting_table"
         ],
         "pattern": [
-            " B ",
-            "BCB",
-            " B "
+            "CCC",
+            "CXC",
+            "CCC"
         ],
         "key": {
-            "B": {
-                "item": "dungeonupdate1:shard"
+            "X": {
+                "item": "berry:shard"
             },
             "C": {
-                "item": "tev:sculkshard"
+                "item": "glow_berries"
             }
         },
         "result": {
-            "item": "tev:sculkedessence"
+            "item": "tev:forbiddenplant"
         }
     }
 }

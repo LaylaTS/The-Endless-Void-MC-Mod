@@ -85,8 +85,8 @@
 			},
 			"tag:minecraft:is_sword": {},
 			"minecraft:cooldown": {
-				"category": "action_cooldown",
-				"duration": 1
+				"category": "wisecooldown",
+				"duration": 0.1
 			}
 		},
 		"events": {

@@ -200,6 +200,9 @@
 		},
 		"tev_trueaxe": {
 			"textures": "textures/items/trueaxe"
+		},
+		"tev_sculkedlandstpamulet": {
+			"textures": "textures/items/TPAMULET"
 		}
 	}
 }

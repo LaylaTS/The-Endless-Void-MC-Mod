@@ -16,13 +16,6 @@
       "minecraft:hand_equipped": true,
       "minecraft:allow_off_hand": true,
       "minecraft:foil": true,
-      "minecraft:durability": {
-        "max_durability": 1006499494497057407,
-        "damage_chance": {
-          "min": 0,
-          "max": 0
-        }
-      },
       "minecraft:repairable": {
         "repair_items": [
           {
@@ -40,7 +33,7 @@
         ]
       },
       "minecraft:mining_speed": 1,
-      "minecraft:damage": 6,
+      "minecraft:damage": 7,
       "minecraft:enchantable": {
         "value": 15,
         "slot": "sword"

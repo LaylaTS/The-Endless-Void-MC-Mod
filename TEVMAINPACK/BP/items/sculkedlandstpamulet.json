@@ -1,0 +1,33 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:sculkedlandstpamulet",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tev_sculkedlandstpamulet"
+			},
+			"minecraft:display_name": {
+				"value": "§6Teleport to Island 1 Sculked Lands§r"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "tev:tpplayer"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "tpamuletcooldown",
+				"duration": 180
+			}
+		},
+		"events": {
+			"tev:tpplayer": {
+				"run_command": {
+					"command": "/tp @s 29818.56 150.00 29957.45"
+				}
+			}
+		}
+	}
+}

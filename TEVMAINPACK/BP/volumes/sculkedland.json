@@ -1,0 +1,30 @@
+{
+	"format_version": "1.17.30",
+	"minecraft:volume": {
+		"description": {
+			"identifier": "tev:mainfogtype"
+		},
+		"components": {
+			"minecraft:bounds": {
+				"dimension": "overworld",
+				"max": [
+					200,
+					310,
+					200
+				],
+				"min": [
+					-200,
+					-60,
+					-200
+				]
+			},
+			"minecraft:on_actor_enter": {
+				"on_enter": []
+			},
+			"minecraft:fog": {
+				"fog_identifier": "tev:mainfog_setting",
+				"priority": 0
+			}
+		}
+	}
+}

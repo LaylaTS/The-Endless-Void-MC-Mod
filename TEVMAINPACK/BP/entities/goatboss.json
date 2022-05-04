@@ -96,7 +96,7 @@
             },
             "minecraft:behavior.melee_attack": {
                 "priority": 3,
-                "melee_fov": 90.0,
+                "melee_fov": 125.0,
                 "speed_multiplier": 1,
                 "track_target": false,
                 "require_complete_path": true
@@ -108,7 +108,7 @@
                 "priority": 0,
                 "must_see": true,
                 "reselect_targets": true,
-                "within_radius": 25.0,
+                "within_radius": 125.0,
                 "must_see_forget_duration": 17.0,
                 "entity_types": [
                     {

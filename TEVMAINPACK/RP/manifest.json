@@ -6,7 +6,7 @@
 		],
 		"generated_with": {
 			"bridge": [
-				"2.2.8"
+				"2.2.9"
 			],
 			"dash": [
 				"0.8.11"
@@ -21,7 +21,7 @@
 			18,
 			0
 		],
-		"uuid": "06a2a989-6763-418e-8a2c-99fac2862d82",
+		"uuid": "3521337e-59f3-4d53-8c28-f1a368fc3abf",
 		"version": [
 			1,
 			0,
@@ -31,7 +31,7 @@
 	"modules": [
 		{
 			"type": "resources",
-			"uuid": "b4dabeda-f59a-45f7-a248-1041f11cb4ed",
+			"uuid": "f65873c9-c45b-46cf-9f4f-4fb98a2e9ab6",
 			"version": [
 				1,
 				0,

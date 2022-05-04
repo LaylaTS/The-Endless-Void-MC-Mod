@@ -1,0 +1,84 @@
+{
+    "format_version": "1.18.20",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "tev:friendlylasershooter",
+            "is_summonable": true,
+            "is_experimental": false,
+            "is_spawnable": false
+        },
+        "component_groups": {
+            "tev:despawn": {
+                "minecraft:instant_despawn": {
+                    "remove_child_entities": true
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "guardian",
+                    "mob"
+                ]
+            },
+            "minecraft:shooter": {
+                "def": "small_fireball"
+            },
+            "minecraft:timer": {
+                "looping": true,
+                "randomInterval": true,
+                "time": [
+                    1.0,
+                    3.0
+                ],
+                "time_down_event": {
+                    "event": "tev:die"
+                }
+            },
+            "minecraft:damage_over_time": {
+                "time_between_hurt": 5,
+                "damage_per_hurt": 1
+            },
+            "minecraft:navigation.hover": {},
+            "minecraft:behavior.ranged_attack": {
+                "priority": 0,
+                "burst_shots": 9,
+                "burst_interval": 0.1,
+                "charge_charged_trigger": 0.0,
+                "charge_shoot_trigger": 1.0,
+                "attack_interval_min": 3.0,
+                "attack_interval_max": 5.0,
+                "attack_radius": 50.0
+            },
+            "minecraft:health": {
+                "value": 2
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 1,
+                "entity_types": {
+                    "filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player",
+                        "operator": "!="
+                    }
+                }
+            }
+        },
+        "events": {
+            "tev:die": {
+                "die": {
+                    "target": "self"
+                },
+                "run_command": {
+                    "command": "/particle minecraft:endrod"
+                },
+                "add": {
+                    "component_groups": [
+                        "tev:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -10,8 +10,11 @@
 			"minecraft:icon": {
 				"texture": "tev_forbiddenplant"
 			},
+			"minecraft:armor": {
+				"protection": 2
+			},
 			"minecraft:display_name": {
-				"value": "§4Tank§r | §1Accessory§r | §9Forbidden Plant§r\n§o§8Accessory - equip in the accessory slot (shield).\n§o§8Heals nearby allies when you die."
+				"value": "§eAccessory§r | §9Forbidden Plant§r\n§o§8Accessory - equip in the accessory slot (shield).\n§o§8Heals nearby allies when you die."
 			},
 			"minecraft:wearable": {
 				"slot": "slot.weapon.offhand",
