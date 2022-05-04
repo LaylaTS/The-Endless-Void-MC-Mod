@@ -1,0 +1,45 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tev:tpamuletcraft1"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "BGD",
+            "O C",
+            "XYZ"
+        ],
+        "key": {
+            "B": {
+                "item": "berry:shard"
+            },
+            "G": {
+                "item": "tev:sculkshard"
+            },
+            "D": {
+                "item": "amethyst_block"
+            },
+            "O": {
+                "item": "glow_berries"
+            },
+            "C": {
+                "item": "string"
+            },
+            "Z": {
+                "item": "leaves"
+            },
+            "X": {
+                "item": "iron_ingot"
+            },
+            "Y": {
+                "item": "rotten_flesh"
+            }
+        },
+        "result": {
+            "item": "tev:sculkedlandstpamulet"
+        }
+    }
+}
