@@ -20,6 +20,7 @@
 				"slot": "slot.weapon.offhand",
 				"dispensable": true
 			},
+			"minecraft:allow_off_hand": true,
 			"minecraft:render_offsets": {
 				"off_hand": {
 					"first_person": {

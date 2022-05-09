@@ -203,6 +203,9 @@
 		},
 		"tev_sculkedlandstpamulet": {
 			"textures": "textures/items/TPAMULET"
+		},
+		"tev_thornsaccessory": {
+			"textures": "textures/items/thorns accessory"
 		}
 	}
 }

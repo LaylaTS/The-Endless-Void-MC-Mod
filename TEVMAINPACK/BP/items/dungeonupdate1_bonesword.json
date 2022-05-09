@@ -16,22 +16,6 @@
       "minecraft:hand_equipped": true,
       "minecraft:allow_off_hand": true,
       "minecraft:foil": true,
-      "minecraft:repairable": {
-        "repair_items": [
-          {
-            "items": [
-              "minecraft:emerald"
-            ],
-            "repair_amount": 10
-          },
-          {
-            "items": [
-              "dungeonupdate1:bonesword"
-            ],
-            "repair_amount": "context.other->query.remaining_durability + 0.2 * context.other->query.max_durability"
-          }
-        ]
-      },
       "minecraft:mining_speed": 1,
       "minecraft:damage": 7,
       "minecraft:enchantable": {
@@ -94,8 +78,8 @@
         "value": "§dBone Sword§f | §915 Mana"
       },
       "minecraft:cooldown": {
-        "category": "action_cooldown",
-        "duration": 1
+        "category": "bonesword",
+        "duration": 3
       }
     },
     "events": {

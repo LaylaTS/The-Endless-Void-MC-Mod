@@ -38,11 +38,37 @@
 					"value": 0.5
 				}
 			},
+			"tev:normalmode": {
+				"minecraft:damage_sensor": {
+					"triggers": {
+						"cause": "all",
+						"on_damage": {
+							"event": "tev:on_damageevents",
+							"target": "self"
+						}
+					}
+				}
+			},
+			"tev:apocalypsemode": {
+				"minecraft:damage_sensor": {
+					"triggers": {
+						"cause": "all",
+						"damage_multiplier": 2,
+						"on_damage": {
+							"event": "tev:on_damageevents",
+							"target": "self"
+						}
+					}
+				}
+			},
 			"tev:deathmode": {
 				"minecraft:damage_sensor": {
 					"triggers": {
 						"cause": "all",
-						"damage_multiplier": 10000000
+						"damage_multiplier": 10000000,
+						"on_damage": {
+							"event": "tev:on_damageevents"
+						}
 					}
 				}
 			},
@@ -120,13 +146,9 @@
 				"value": 0,
 				"max": 1
 			},
-			"minecraft:damage_sensor": {
-				"triggers": {
-					"cause": "all",
-					"on_damage": {
-						"event": "tev:hardmode"
-					}
-				}
+			"minecraft:on_hurt": {
+				"event": "tev:on_damageevents",
+				"target": "self"
 			},
 			"minecraft:breathable": {
 				"total_supply": 15,
@@ -179,52 +201,72 @@
 			"minecraft:block_climber": {}
 		},
 		"events": {
-			"tev:magetoggle": {
-				"sequence": [
-					{
-						"remove": {
-							"component_groups": [
-								"tev:tankclass",
-								"tev:assassinclass"
-							]
-						}
-					},
-					{
-						"add": {
-							"component_groups": [
-								"tev:mageclass"
-							]
-						}
-					},
-					{
-						"run_command": {
-							"command": "/scoreboard players set @s class 2",
-							"target": "self"
-						}
-					}
-				]
-			},
-			"tev:removehardmode": {
+			"tev:normalmode": {
 				"remove": {
 					"component_groups": [
+						"tev:apocalypsemode",
 						"tev:deathmode"
 					]
+				},
+				"add": {
+					"component_groups": [
+						"tev:normalmode"
+					]
+				},
+				"run_command": {
+					"command": "/scoreboard players set @s difficulty 0"
 				}
 			},
-			"tev:addhardmode": {
+			"tev:apocalypsemode": {
+				"remove": {
+					"component_groups": [
+						"tev:normalmode",
+						"tev:deathmode"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"tev:apocalypsemode"
+					]
+				},
+				"run_command": {
+					"command": "/scoreboard players set @s difficulty 1"
+				}
+			},
+			"tev:deathmode": {
+				"remove": {
+					"component_groups": [
+						"tev:normalmode",
+						"tev:deathmode"
+					]
+				},
 				"add": {
 					"component_groups": [
 						"tev:deathmode"
 					]
+				},
+				"run_command": {
+					"command": "/scoreboard players set @s difficulty 2"
 				}
 			},
-			"tev:hardmode": {
-				"run_command": {
-					"command": [
-						"function apocalypsemode"
-					],
-					"target": "self"
-				}
+			"tev:on_damageevents": {
+				"sequence": [
+					{
+						/*THORNS ACCESSORY*/
+						"run_command": {
+							"command": [
+								"/damage @e[type=!player,type=!npc,r=4] 1 thorns"
+							],
+							"target": "self"
+						},
+						"filters": {
+							"test": "has_equipment",
+							"subject": "self",
+							"value": "tev:thornsaccessory",
+							"domain": "hand"
+						}
+					}
+				]
 			},
 			"tev:ondeathevent": {
 				"sequence": [
@@ -252,6 +294,31 @@
 								"/fog @s remove mainfog",
 								"/fog @s remove mainfog"
 							]
+						}
+					}
+				]
+			},
+			"tev:magetoggle": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"tev:tankclass",
+								"tev:assassinclass"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"tev:mageclass"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "/scoreboard players set @s class 2",
+							"target": "self"
 						}
 					}
 				]

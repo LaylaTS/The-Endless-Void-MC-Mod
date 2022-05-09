@@ -1,0 +1,57 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:thornsaccessory",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tev_thornsaccessory"
+			},
+			"minecraft:wearable": {
+				"dispensable": true,
+				"slot": "slot.weapon.offhand"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:display_name": {
+				"value": "§9Accessory§r | §1Corrupted Thorns§r\n§8§oEquip in shield slot.\nDeals AOE thorns damage when you get hit."
+			},
+			"minecraft:allow_off_hand": true,
+			"minecraft:render_offsets": {
+				"off_hand": {
+					"first_person": {
+						"scale": [
+							0,
+							0,
+							0
+						]
+					},
+					"third_person": {
+						"scale": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"main_hand": {
+					"first_person": {
+						"scale": [
+							0,
+							0,
+							0
+						]
+					},
+					"third_person": {
+						"scale": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

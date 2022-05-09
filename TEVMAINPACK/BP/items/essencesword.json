@@ -35,6 +35,10 @@
 					"target": "self"
 				}
 			},
+			"minecraft:cooldown": {
+				"category": "essenceshot",
+				"duration": 0.3
+			},
 			"minecraft:can_destroy_in_creative": false,
 			"minecraft:digger": {
 				"use_efficiency": true,
@@ -63,7 +67,8 @@
 					"target": "self",
 					"command": [
 						"execute @s[scores={esencja=100..,difficulty=2}] ~ ~ ~ execute @e[c=4,r=15,type=!fireball,type=!wither_skull,type=!arrow,type=!witherboss:friendlyskull,type=!player,type=!item,type=!npc,type=!xp_orb,type=!armor_stand] ~ ~ ~ summon tev:goldball ~ ~6 ~",
-						"scoreboard players remove @s[scores={esencja=100..,difficulty=2}] esencja 100"
+						"scoreboard players remove @s[scores={esencja=100..,difficulty=2}] esencja 100",
+						"execute @s@s[scores={esencja=100..,difficulty=2},hasitem=[{slot=0,location=slot.weapon.offhand,item=tev:essenceswordbooster}]] ~ ~ ~ execute @e[c=4,r=15,type=!fireball,type=!wither_skull,type=!arrow,type=!witherboss:friendlyskull,type=!player,type=!item,type=!npc,type=!xp_orb,type=!armor_stand] ~ ~ ~ summon tev:goldball ~ ~6 ~"
 					]
 				}
 			},

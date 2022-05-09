@@ -15,6 +15,15 @@
                     "weight": 1
                 }
             ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "tev:corruptedissue"
+                }
+            ]
         }
     ]
 }

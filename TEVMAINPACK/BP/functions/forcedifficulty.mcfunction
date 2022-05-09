@@ -1,0 +1,1 @@
+event entity @a[scores={playtime=1000..1002}] tev:normalmode

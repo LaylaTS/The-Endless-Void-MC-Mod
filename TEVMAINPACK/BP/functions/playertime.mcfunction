@@ -1,0 +1,1 @@
+scoreboard players add @a playtime 1
