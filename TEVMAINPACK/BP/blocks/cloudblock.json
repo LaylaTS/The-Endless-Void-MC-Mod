@@ -1,0 +1,29 @@
+{
+    "format_version": "1.18.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "tev:cloudblock"
+        },
+        "components": {
+            "minecraft:friction": 1,
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "cloudblock",
+                    "render_method": "blend"
+                }
+            },
+            "minecraft:on_fall_on": {
+                "event": "tev:fallon",
+                "min_fall_distance": 0
+            },
+            "minecraft:block_light_emission": 0.25
+        },
+        "events": {
+            "tev:fallon": {
+                "run_command": {
+                    "command": "/effect @p[r=1] levitation 1 17 true"
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,6 @@
 {
-	"format_version": [
-		1,
-		1,
-		0
-	]
+	"cloudblock": {
+		"textures": "cloudblock",
+		"isotropic": true
+	}
 }

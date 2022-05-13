@@ -15,6 +15,9 @@
 		},
 		"tev_sculkore": {
 			"textures": "textures/blocks/sculkore_ore_down"
+		},
+		"cloudblock": {
+			"textures": "textures/blocks/cloudtexture"
 		}
 	}
 }
