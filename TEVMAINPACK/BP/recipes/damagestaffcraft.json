@@ -2,26 +2,29 @@
     "format_version": "1.12",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "tev:netheriteingotcraft"
+            "identifier": "tev:damagestaffcraft"
         },
         "tags": [
             "crafting_table"
         ],
         "pattern": [
-            "BBB",
-            "BGB",
-            "BBB"
+            "  D",
+            " B ",
+            "G  "
         ],
         "key": {
             "B": {
                 "item": "tev:sculkedessence"
             },
             "G": {
-                "item": "diamond"
+                "item": "stick"
+            },
+            "D": {
+                "item": "tev:corruptedissue"
             }
         },
         "result": {
-            "item": "netherite_ingot"
+            "item": "tev:damagestaff"
         }
     }
 }

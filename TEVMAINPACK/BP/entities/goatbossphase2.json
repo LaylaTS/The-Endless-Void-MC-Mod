@@ -1,5 +1,5 @@
 {
-    "format_version": "1.18.20",
+    "format_version": "1.17.10",
     "minecraft:entity": {
         "description": {
             "identifier": "tev:goatbossphase2",
@@ -16,22 +16,9 @@
                     "knockback_damage": 5,
                     "knockback_strength": 5,
                     "priority": 0,
-                    "knockback_height_cap": 3,
                     "on_roar_end": {
                         "event": "tev:endroar"
                     }
-                }
-            },
-            "minecraft:target_nearby_sensor": {
-                "inside_range": 12.5,
-                "outside_range": 16.0,
-                "must_see": true,
-                "on_outside_range": {
-                    "event": "tev:startshooter",
-                    "target": "self"
-                },
-                "on_inside_range": {
-                    "event": "tev:endshooter"
                 }
             },
             "tev:shootingphase": {

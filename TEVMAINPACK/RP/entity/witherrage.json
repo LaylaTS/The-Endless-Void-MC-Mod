@@ -6,14 +6,14 @@
 			"materials": {
 				"default": "entity_alphatest"
 			},
+			"geometry": {
+				"default": "geometry.item_sprite"
+			},
 			"textures": {
 				"default": "textures/entity/witherrage"
 			},
-			"geometry": {
-				"default": "geometry.witherrage"
-			},
 			"render_controllers": [
-				"controller.render.witherrage"
+				"controller.render.menaceattack"
 			],
 			"spawn_egg": {
 				"base_color": "#000000",

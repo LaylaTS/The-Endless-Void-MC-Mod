@@ -2,18 +2,18 @@
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "witherweapons:witherwiseentity",
+			"identifier": "tev:dodgewave",
 			"materials": {
 				"default": "entity_alphatest"
-			},
-			"textures": {
-				"default": "textures/entity/witherwiseentity"
 			},
 			"geometry": {
 				"default": "geometry.item_sprite"
 			},
+			"textures": {
+				"default": "textures/entity/witherrage"
+			},
 			"render_controllers": [
-				"controller.render.witherwiseentity"
+				"controller.render.menaceattack"
 			],
 			"spawn_egg": {
 				"base_color": "#000000",

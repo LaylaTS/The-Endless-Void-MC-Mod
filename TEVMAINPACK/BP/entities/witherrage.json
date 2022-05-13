@@ -9,6 +9,9 @@
 		},
 		"component_groups": {},
 		"components": {
+			"minecraft:scale": {
+				"value": 0.0005
+			},
 			"minecraft:behavior.knockback_roar": {
 				"priority": 0,
 				"knockback_damage": 15,

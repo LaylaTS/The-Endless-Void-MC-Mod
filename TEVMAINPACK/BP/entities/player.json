@@ -372,6 +372,47 @@
 						}
 					}
 				]
+			},
+			"tev:forbiddenbladeonhit": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "is_sneaking",
+							"subject": "self",
+							"value": true
+						},
+						"run_command": {
+							"command": "/say sneak attack"
+						}
+					},
+					{
+						"filters": {
+							"test": "is_sneaking",
+							"subject": "self",
+							"value": false
+						},
+						"run_command": {
+							"command": "/say not a sneak attack"
+						}
+					}
+				]
+			},
+			"tev:forbiddenbladerclick": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "is_sneaking",
+							"value": false,
+							"subject": "self"
+						},
+						"run_command": {
+							"command": [
+								"/tag @s add dodging",
+								"/summon tev:dodgewave ^ ^ ^-1"
+							]
+						}
+					}
+				]
 			}
 		}
 	}

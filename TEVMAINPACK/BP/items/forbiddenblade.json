@@ -1,0 +1,46 @@
+{
+	"format_version": "1.17.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:forbiddenblade"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tev_forbiddenblade"
+			},
+			"minecraft:damage": 15,
+			"minecraft:hand_equipped": true,
+			"minecraft:foil": true,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "tev:onrclick"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "dodge",
+				"duration": 4
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "tev:onhurt"
+				}
+			}
+		},
+		"events": {
+			"tev:onhurt": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": "/event entity @s tev:forbiddenbladeonhit"
+						}
+					}
+				]
+			},
+			"tev:onrclick": {
+				"run_command": {
+					"command": "/event entity @s tev:forbiddenbladerclick"
+				}
+			}
+		}
+	}
+}

@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "flipbook_texture": "textures/items/damagestaff",
+        "atlas_tile": "damage_staff",
+        "ticks_per_frame": 2,
+        "blend_frames": true
+    },
+    {
+        "atlas_tile": "cloudblock",
+        "blend_frames": true,
+        "flipbook_texture": "textures/blocks/cloudtexture",
+        "ticks_per_frame": 10
+    }
+]

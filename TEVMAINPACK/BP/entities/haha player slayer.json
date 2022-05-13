@@ -19,16 +19,6 @@
 					"pull_in_force": 0.75,
 					"reach_mob_distance": 1.75,
 					"eat_mob_sound": "tongue",
-					"mob_loot": [
-						{
-							"mob": "slime",
-							"loot": "slime_ball"
-						},
-						{
-							"mob": "magma_cube",
-							"loot": "ochre_froglight"
-						}
-					]
 				}
 			},
 			"cold_frog": {
@@ -42,16 +32,6 @@
 					"pull_in_force": 0.75,
 					"reach_mob_distance": 1.75,
 					"eat_mob_sound": "tongue",
-					"mob_loot": [
-						{
-							"mob": "slime",
-							"loot": "slime_ball"
-						},
-						{
-							"mob": "magma_cube",
-							"loot": "verdant_froglight"
-						}
-					]
 				}
 			},
 			"warm_frog": {
@@ -65,16 +45,6 @@
 					"pull_in_force": 0.75,
 					"reach_mob_distance": 1.75,
 					"eat_mob_sound": "tongue",
-					"mob_loot": [
-						{
-							"mob": "slime",
-							"loot": "slime_ball"
-						},
-						{
-							"mob": "magma_cube",
-							"loot": "pearlescent_froglight"
-						}
-					]
 				}
 			},
 			"pregnant": {

@@ -206,6 +206,12 @@
 		},
 		"tev_thornsaccessory": {
 			"textures": "textures/items/thorns accessory"
+		},
+		"damage_staff": {
+			"textures": "textures/items/damagestaff"
+		},
+		"tev_forbiddenblade": {
+			"textures": "textures/items/forbiddenblade"
 		}
 	}
 }

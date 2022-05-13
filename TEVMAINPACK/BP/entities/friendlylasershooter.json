@@ -67,9 +67,6 @@
         },
         "events": {
             "tev:die": {
-                "die": {
-                    "target": "self"
-                },
                 "run_command": {
                     "command": "/particle minecraft:endrod"
                 },

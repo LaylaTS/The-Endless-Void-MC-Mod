@@ -1,0 +1,54 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "tev:dodgewave",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"tev:death": {
+				"minecraft:despawn": {},
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:scale": {
+				"value": 0.000005
+			},
+			"minecraft:behavior.knockback_roar": {
+				"priority": 0,
+				"on_roar_end": {
+					"event": "tev:death"
+				},
+				"knockback_damage": 0,
+				"knockback_strength": 7,
+				"knockback_range": 3,
+				"attack_time": 0.1,
+				"duration": 0.1,
+				"knockback_filters": {
+					"test": "has_tag",
+					"subject": "other",
+					"operator": "==",
+					"value": "dodging"
+				}
+			}
+		},
+		"events": {
+			"tev:death": {
+				"add": {
+					"component_groups": [
+						"tev:death"
+					]
+				},
+				"run_command": {
+					"command": [
+						"/kill @s",
+						"/tag @a[r=55] remove dodging"
+					]
+				}
+			}
+		}
+	}
+}

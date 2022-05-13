@@ -2,26 +2,26 @@
     "format_version": "1.12",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "tev:netheriteingotcraft"
+            "identifier": "tev:thornscraft"
         },
         "tags": [
             "crafting_table"
         ],
         "pattern": [
-            "BBB",
-            "BGB",
-            "BBB"
+            "G D",
+            " G ",
+            "D G"
         ],
         "key": {
-            "B": {
-                "item": "tev:sculkedessence"
-            },
             "G": {
-                "item": "diamond"
+                "item": "glow_berries"
+            },
+            "D": {
+                "item": "tev:corruptedissue"
             }
         },
         "result": {
-            "item": "netherite_ingot"
+            "item": "tev:thornsaccessory"
         }
     }
 }
