@@ -1,0 +1,38 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tev:healthcatalyst",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:use_duration": 3,
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation_modifier": "low",
+				"can_always_eat": true,
+				"on_consume": {
+					"event": "tev:oneat"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "tev_healthcatalyst"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:render_offsets": "apple"
+		},
+		"events": {
+			"tev:oneat": {
+				"run_command": {
+					"command": [
+						"/effect @s instant_health 1 1 true"
+					]
+				},
+				"shoot": {
+					"projectile": "tev:assassinskull",
+					"launch_power": 0.5
+				}
+			}
+		}
+	}
+}

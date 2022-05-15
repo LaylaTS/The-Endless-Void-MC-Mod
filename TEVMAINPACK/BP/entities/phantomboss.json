@@ -69,7 +69,7 @@
             "minecraft:behavior.nearest_attackable_target": {
                 "priority": 1,
                 "reselect_targets": true,
-                "scan_interval": 1,
+                "scan_interval": 10,
                 "within_radius": 640.0,
                 "entity_types": [
                     {

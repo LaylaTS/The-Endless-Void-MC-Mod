@@ -212,6 +212,24 @@
 		},
 		"tev_forbiddenblade": {
 			"textures": "textures/items/forbiddenblade"
+		},
+		"tev_healthcatalyst": {
+			"textures": "textures/items/healcatalyst"
+		},
+		"tev_desertessence_helmet": {
+			"textures": "textures/items/desertessencearmor/desertessence_helmet"
+		},
+		"tev_desertessence_chestplate": {
+			"textures": "textures/items/desertessencearmor/desertessence_chestplate"
+		},
+		"tev_desertessence_leggings": {
+			"textures": "textures/items/desertessencearmor/desertessence_leggings"
+		},
+		"tev_desertessence_boots": {
+			"textures": "textures/items/desertessencearmor/desertessence_boots"
+		},
+		"tev_heavyblade": {
+			"textures": "textures/items/heavysword"
 		}
 	}
 }

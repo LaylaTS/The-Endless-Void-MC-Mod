@@ -53,7 +53,7 @@
 				"has_gravity": true
 			},
 			"minecraft:collision_box": {
-				"width": 0.4,
+				"width": 0.22,
 				"height": 0.3
 			},
 			"minecraft:pushable": {

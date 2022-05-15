@@ -381,9 +381,35 @@
 							"subject": "self",
 							"value": true
 						},
-						"run_command": {
-							"command": "/say sneak attack"
-						}
+						"sequence": [
+							{
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_mob_effect",
+											"subject": "self",
+											"value": "speed"
+										},
+										{
+											"test": "has_mob_effect",
+											"subject": "self",
+											"value": "strength"
+										},
+										{
+											"test": "has_mob_effect",
+											"subject": "self",
+											"value": "jump_boost"
+										}
+									]
+								},
+								"run_command": {
+									"command": [
+										"/tag @s add dodging",
+										"/summon tev:smalldodgewave ^ ^ ^1"
+									]
+								}
+							}
+						]
 					},
 					{
 						"filters": {
@@ -391,9 +417,42 @@
 							"subject": "self",
 							"value": false
 						},
-						"run_command": {
-							"command": "/say not a sneak attack"
-						}
+						"sequence": [
+							{
+								"run_command": {
+									"command": "/effect @s speed 2 1"
+								}
+							},
+							{
+								"filters": {
+									"test": "has_mob_effect",
+									"subject": "self",
+									"value": "speed"
+								},
+								"run_command": {
+									"command": "/effect @s strength 2 1 true"
+								}
+							},
+							{
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_mob_effect",
+											"subject": "self",
+											"value": "speed"
+										},
+										{
+											"test": "has_mob_effect",
+											"subject": "self",
+											"value": "strength"
+										}
+									]
+								},
+								"run_command": {
+									"command": "/effect @s jump_boost 2 1 true"
+								}
+							}
+						]
 					}
 				]
 			},
@@ -409,6 +468,40 @@
 							"command": [
 								"/tag @s add dodging",
 								"/summon tev:dodgewave ^ ^ ^-1"
+							]
+						}
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "self",
+									"value": true
+								},
+								{
+									"test": "has_mob_effect",
+									"value": "jump_boost",
+									"subject": "self"
+								},
+								{
+									"test": "has_mob_effect",
+									"value": "speed",
+									"subject": "self"
+								},
+								{
+									"test": "has_mob_effect",
+									"value": "strength",
+									"subject": "self"
+								}
+							]
+						},
+						"run_command": {
+							"command": [
+								"/effect @s levitation 1 10 true",
+								"/effect @s slow_falling 5 255 true",
+								"/summon tev:assassinskull ^2  ^5  ^-2",
+								"/summon tev:assassinskull ^-2 ^5 ^-2 "
 							]
 						}
 					}

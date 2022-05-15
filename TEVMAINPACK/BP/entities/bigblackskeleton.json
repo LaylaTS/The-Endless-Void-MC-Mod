@@ -24,7 +24,7 @@
 			},
 			"minecraft:equip_item": {},
 			"minecraft:collision_box": {
-				"width": 0.72,
+				"width": 0.472,
 				"height": 2.01
 			},
 			"minecraft:attack": {
@@ -480,7 +480,7 @@
 			"minecraft:behavior.melee_attack": {
 				"priority": 4,
 				"track_target": true,
-				"speed_multiplier": 1.25
+				"speed_multiplier": 1
 			},
 			"minecraft:behavior.pickup_items": {
 				"priority": 5,

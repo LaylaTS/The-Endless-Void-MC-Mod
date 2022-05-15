@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "tev:dodgewave",
+			"identifier": "tev:smalldodgewave",
 			"is_spawnable": true,
 			"is_summonable": true,
 			"is_experimental": false
@@ -22,11 +22,17 @@
 				"on_roar_end": {
 					"event": "tev:death"
 				},
-				"knockback_damage": 0,
-				"knockback_strength": 5,
+				"knockback_damage": 15,
+				"knockback_strength": 2,
 				"knockback_range": 3,
 				"attack_time": 0.1,
 				"duration": 0.1,
+				"damage_filters": {
+					"test": "is_family",
+					"subject": "other",
+					"value": "player",
+					"operator": "!="
+				},
 				"knockback_filters": {
 					"test": "has_tag",
 					"subject": "other",

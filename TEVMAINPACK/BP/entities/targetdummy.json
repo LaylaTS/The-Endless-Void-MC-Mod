@@ -1,0 +1,67 @@
+{
+    "format_version": "1.18.20",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "tev:targetdummy",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:health": {
+                "value": 5000
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:nameable": {
+                "always_show": true,
+                "allow_name_tag_renaming": false
+            },
+            "minecraft:boss": {
+                "name": "Right click to pickup!",
+                "hud_range": 9
+            },
+            "minecraft:timer": {
+                "looping": true,
+                "time": 2,
+                "time_down_event": {
+                    "event": "tev:healself"
+                }
+            },
+            "minecraft:interact": {
+                "interactions": {
+                    "on_interact": {
+                        "event": "tev:collect",
+                        "target": "self"
+                    }
+                }
+            }
+        },
+        "events": {
+            "tev:collect": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": "/give @p tev:targetdummy_spawn_egg"
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": "/kill @s"
+                        }
+                    }
+                ]
+            },
+            "tev:healself": {
+                "run_command": {
+                    "command": "/effect @s instant_health 1 255"
+                }
+            }
+        }
+    }
+}

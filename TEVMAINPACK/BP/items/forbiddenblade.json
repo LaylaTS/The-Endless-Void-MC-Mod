@@ -10,15 +10,26 @@
 			},
 			"minecraft:damage": 15,
 			"minecraft:hand_equipped": true,
-			"minecraft:foil": true,
 			"minecraft:on_use": {
 				"on_use": {
 					"event": "tev:onrclick"
 				}
 			},
+			"minecraft:foil": true,
 			"minecraft:cooldown": {
 				"category": "dodge",
 				"duration": 4
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"third_person": {
+						"position": [
+							0.05,
+							1.2,
+							-0.4
+						]
+					}
+				}
 			},
 			"minecraft:weapon": {
 				"on_hurt_entity": {
