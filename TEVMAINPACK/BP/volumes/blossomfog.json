@@ -1,0 +1,20 @@
+{
+    "format_version": "1.17.30",
+    "minecraft:volume": {
+        "description": {
+            "identifier": "tev:blossomvolume"
+        },
+        "components": {
+            "minecraft:bounds": {
+                "dimension": "overworld"
+            },
+            "minecraft:on_actor_enter": {
+                "on_enter": []
+            },
+            "minecraft:fog": {
+                "fog_identifier": "tev:blossomfog",
+                "priority": 0
+            }
+        }
+    }
+}

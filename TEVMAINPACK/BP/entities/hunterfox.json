@@ -1,0 +1,223 @@
+{
+    "format_version": "1.18.20",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "tev:hunterfox",
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "component_groups": {
+            "tev:sittilsee": {
+                "minecraft:damage_sensor": {
+                    "triggers": {
+                        "on_damage": {
+                            "event": "tev:changetoleap"
+                        }
+                    }
+                }
+            },
+            "tev:otherattack": {
+                "minecraft:behavior.ocelotattack": {
+                    "priority": 4,
+                    "cooldown_time": 1.0,
+                    "x_max_rotation": 30.0,
+                    "y_max_head_rotation": 30.0,
+                    "max_distance": 15.0,
+                    "max_sneak_range": 15.0,
+                    "max_sprint_range": 5.0,
+                    "reach_multiplier": 1.1,
+                    "sneak_speed_multiplier": 0.6,
+                    "sprint_speed_multiplier": 1.53,
+                    "walk_speed_multiplier": 0.8
+                },
+                "minecraft:attack": {
+                    "damage": 7
+                },
+                "minecraft:timer": {
+                    "looping": true,
+                    "time": 5,
+                    "time_down_event": {
+                        "event": "tev:changetoleap"
+                    }
+                }
+            },
+            "tev:leap": {
+                "minecraft:attack": {
+                    "damage": 20
+                },
+                "minecraft:behavior.stalk_and_pounce_on_target": {
+                    "priority": 7,
+                    "stalk_speed": 1.5,
+                    "max_stalk_dist": 36.0,
+                    "leap_height": 0.9,
+                    "leap_dist": 0.8,
+                    "pounce_max_dist": 5.0,
+                    "interest_time": 0.1,
+                    "stuck_time": 2.0,
+                    "strike_dist": 5.0,
+                    "stuck_blocks": {
+                        "test": "is_block",
+                        "subject": "block",
+                        "operator": "==",
+                        "value": "snow_layer"
+                    }
+                },
+                "minecraft:timer": {
+                    "looping": true,
+                    "time": 5,
+                    "time_down_event": {
+                        "event": "tev:changetootherattack"
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:boss": {
+                "hud_range": 25,
+                "name": "Blossom Fox"
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 3,
+                "must_see": false,
+                "entity_types": {
+                    "filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                    }
+                }
+            },
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:type_family": {
+                "family": [
+                    "fox",
+                    "lightweight",
+                    "mob"
+                ]
+            },
+            "minecraft:breathable": {
+                "totalSupply": 15,
+                "suffocateTime": 0
+            },
+            "minecraft:equip_item": {},
+            "minecraft:navigation.walk": {
+                "can_path_over_water": true,
+                "avoid_water": true,
+                "avoid_damage_blocks": true
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 0.7
+            },
+            "minecraft:nameable": {},
+            "minecraft:health": {
+                "value": 2400,
+                "max": 2400
+            },
+            "minecraft:movement": {
+                "value": 0.3
+            },
+            "minecraft:despawn": {
+                "despawn_from_distance": {}
+            },
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:behavior.equip_item": {
+                "priority": 2
+            },
+            "minecraft:behavior.tempt": {
+                "priority": 3,
+                "speed_multiplier": 0.5,
+                "within_radius": 16,
+                "can_get_scared": true,
+                "items": [
+                    "sweet_berries",
+                    "glow_berries"
+                ]
+            },
+            "minecraft:scale": {
+                "value": 1.5
+            },
+            "minecraft:behavior.raid_garden": {
+                "priority": 12,
+                "blocks": [
+                    "minecraft:sweet_berry_bush",
+                    "minecraft:cave_vines_head_with_berries",
+                    "minecraft:cave_vines_body_with_berries"
+                ],
+                "speed_multiplier": 1.2,
+                "search_range": 12,
+                "search_height": 2,
+                "goal_radius": 0.8,
+                "max_to_eat": 0,
+                "initial_eat_delay": 2
+            },
+            "minecraft:knockback_resistance": {
+                "value": 0.5
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 13,
+                "speed_multiplier": 0.8
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 14,
+                "look_distance": 6.0,
+                "probability": 0.02
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 15
+            },
+            "minecraft:leashable": {
+                "soft_distance": 4.0,
+                "hard_distance": 6.0,
+                "max_distance": 10.0
+            },
+            "minecraft:balloonable": {
+                "mass": 0.6
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:conditional_bandwidth_optimization": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "tev:sittilsee"
+                    ]
+                }
+            },
+            "tev:changetoleap": {
+                "remove": {
+                    "component_groups": [
+                        "tev:otherattack"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "tev:leap"
+                    ]
+                }
+            },
+            "tev:changetootherattack": {
+                "remove": {
+                    "component_groups": [
+                        "tev:leap"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "tev:otherattack"
+                    ]
+                }
+            }
+        }
+    }
+}

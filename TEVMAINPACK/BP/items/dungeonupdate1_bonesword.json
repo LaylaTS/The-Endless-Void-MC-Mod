@@ -23,17 +23,7 @@
         "slot": "sword"
       },
       "minecraft:can_destroy_in_creative": true,
-      "minecraft:weapon": {
-        "on_hurt_entity": {
-          "event": "hurt"
-        },
-        "on_not_hurt_entity": {
-          "event": "hurt"
-        },
-        "on_hit_block": {
-          "event": "hurt"
-        }
-      },
+      "minecraft:weapon": {},
       "minecraft:on_use": {
         "on_use": {
           "event": "on_use_event"

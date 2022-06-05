@@ -35,7 +35,7 @@
                 "value": 2400
             },
             "minecraft:attack": {
-                "damage": 21
+                "damage": 14
             },
             "minecraft:behavior.melee_attack": {
                 "speed_multiplier": 0.7,
@@ -64,7 +64,7 @@
                 "height": 1.4
             },
             "minecraft:movement": {
-                "value": 0.7
+                "value": 0.4
             },
             "minecraft:water_movement": {
                 "drag_factor": 0.98
